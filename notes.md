@@ -265,7 +265,7 @@ In terms of Integration usage of the `scalar.vector.im`, several bridges, bots, 
 
 Matrix uses a concept of [Push server](https://matrix.org/docs/spec/push_gateway/r0.1.0.html) to send push notifications to smartphones. The push server is meant to be managed by the application developer. In case of Riot, the push server is configured to `matrix.org`.
 
-Riot provides two levels of notification privacy:
+Riot provides two privacy level for notifications:
 
 - Normal (event metadata only)
 - Reduced Privacy (full event data)
