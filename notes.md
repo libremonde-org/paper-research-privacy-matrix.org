@@ -149,11 +149,8 @@ Riot therefore uses, by default, a for-profit service that has no related privac
 One of the other default settings is a Matrix ID for the Welcome Bot feature. This feature automatically creates a direct chat with an automated program controlling a Matrix user, allowing a user without prior Matrix experience to ask questions and get useful links. The Matrix ID of the user is `@riot-bot:matrix.org`. Upon inviting the user, a request will be made by the user Homeserver to the `matrix.org` Homeserver, allowing the collection of the following information:
 
 - The Matrix ID of the user, built from their username, and which Homeserver/domain they are using.
-
 - The date and time at which the account was created.
-
 - The IP address/hostname of the server connected to the user, which might allow to identify a user in case of a single-user Homeserver.
-
 - From the Homeserver IP address, their potential GeoIP country/city.
 
   
