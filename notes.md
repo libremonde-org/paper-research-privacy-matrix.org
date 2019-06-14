@@ -220,7 +220,7 @@ This bulk behaviour allows the Identity server to:
 
 Recent versions of Riot have a "Sharing" icon, made of three dots linked together in the shape of a triangle. Riot also has a "Share message" option. Both open a new dialog with a URL starting with https://matrix.to/ and a QR code.
 
-Technically, "sharing" (permalinks) is built around a website https://matrix.to/ instead of a URI scheme. While the website is stateless, a cookie is set on each visit by Cloudfare. This cookie uniquely identifies clients for an unknown purpose. If the link is visited instead of intercepted by the client, the following info is shared with a 3rd party:
+Technically, "sharing" (permalinks) is built around a website https://matrix.to/ instead of a URI scheme. While the website is stateless, a cookie is set on each visit by Cloudflare. This cookie uniquely identifies clients for an unknown purpose. If the link is visited instead of intercepted by the client, the following info is shared with a 3rd party:
 
 - IP address of the client/user.
 - Usage patterns of the "Sharing feature".
@@ -254,7 +254,7 @@ What is less known is that step 2 happens **every time a user switches to anothe
 
 ---
 
-In terms of Integration usage of the `scalar.vector.im`, several bridges, bots, widgets and sticker packs are provided via the `matrix.org` Homeserver. It means that by using nearly any of them, `matrix.org` will be involved directly or indirectly into the room. In case of bridges and bots, a copy of the room history alongside members' display names and avatars will be known/copied to the `matrix.org` server, further giving a mean to directly access data and conversations.
+In terms of Integration usage of the `scalar.vector.im`, several bridges, bots, widgets and sticker packs are provided via the `matrix.org` Homeserver. It means that by using nearly any of them, `matrix.org` will be involved directly or indirectly into the room. In case of bridges and bots, a copy of the room history alongside members' display names and avatars will be known/copied to the `matrix.org` server, further giving a means to directly access data and conversations.
 
 **The tight coupling of `matrix.org` on those servers is never explicitly explained to the users, nor that past chat history could be downloaded in some cases without them being aware, or that any outage to the `matrix.org` server would also affect those services.**
 
@@ -363,7 +363,7 @@ Due to the difficulty of adding new ones, system administrators tend to either l
 
 ## Usage of Matrix.org and Vector.im
 
-All services (hosted under `matrix.org`, `vector.im` and `scalar.vector.im`) are going through [Cloudfare](https://en.wikipedia.org/wiki/Cloudflare), a US-based CDN. TLS termination is done at the Cloudfare level, allowing them to decrypt and see in clear all the traffic coming in and out.
+All services (hosted under `matrix.org`, `vector.im` and `scalar.vector.im`) are going through [Cloudflare](https://en.wikipedia.org/wiki/Cloudflare), a US-based CDN. TLS termination is done at the Cloudflare level, allowing them to decrypt and see in clear all the traffic coming in and out.
 
 It is important to put this information in perspective of all the data/metadata shared given all the points above, allowing a foreign 3rd-party to directly have access to plain text traffic, private identifier, data and metadata without ever being mentioned anywhere.
 
@@ -385,7 +385,7 @@ While the security breach was not in of the Matrix protocol, other Homeservers *
 - No push service, with direct impact to users (we were affected) for 24h+ reported to us.
 - No bridges/bots/widgets hosted on the `matrix.org` Homeserver.
 
-The announcement does not mention anything about collected data from Homeservers as part of the natural behaviour of the network, even thought "*the attacker did have access to the production database*".
+The announcement does not mention anything about collected data from Homeservers as part of the natural behaviour of the network, even though, "*the attacker did have access to the production database*".
 
 In terms of personal identifiers like emails and phone numbers, you can read:
 
@@ -395,11 +395,11 @@ In terms of personal identifiers like emails and phone numbers, you can read:
 
 While technically correct, Identity data as most commonly understood is also present in the Homeserver database which **was** accessed by the attacker. They eventually posted a screenshot of various commands ran on a DB extracts: how much the attacker actually accessed is unclear given the Matrix.org communication.
 
-Finally, on the 12th of April, the attacker used collected credentials (before being locked out) to take control of Cloudfare and pointing matrix.org to another website. The communication is not clear if the defacement affected the `/_matrix` API endpoints and its data coming from others servers.
+Finally, on the 12th of April, the attacker used collected credentials (before being locked out) to take control of Cloudflare and pointing matrix.org to another website. The communication is not clear if the defacement affected the `/_matrix` API endpoints and its data coming from others servers.
 
 ### Privacy and Security Impact
 
-Taking into account all the data and metadata flowing to `matrix.org`, the security breach is a concerning event as an attacker had means to collect and process those data mostly found in system/application logs, database and reverse proxy logs. Such data could also be actively collected via a traffic sniffing of any sort if the TLS-terminated traffic at Cloudfare also flow unencrypted into the internal infrastructure.
+Taking into account all the data and metadata flowing to `matrix.org`, the security breach is a concerning event as an attacker had means to collect and process those data mostly found in system/application logs, database and reverse proxy logs. Such data could also be actively collected via a traffic sniffing of any sort if the TLS-terminated traffic at Cloudflare also flow unencrypted into the internal infrastructure.
 
 The attacker could also have directly disrupted the federation in a significant manner via Denial of Service and cryptographic  poisoning for the Notary and Push services. The attacker had access to hypothetical private room messages in which Integration services are used like bots or bridges.
 
