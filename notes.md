@@ -20,7 +20,7 @@ Data sent on a potential regular basis based on a common web/desktop+smartphone 
 - Email addresses, phone numbers of the user and their contacts.
 - Associations of Email, phone numbers with Matrix IDs.
 - Usage patterns of the user.
-- IP of the user, which can give more or less precise geographical location information.
+- IP address of the user, which can give more or less precise geographical location information.
 - The user's devices and system information.
 - The other servers that users talks to.
 - Room IDs, potentially identifying the Direct chat ones and the other user/server.
@@ -48,7 +48,7 @@ Having studied Matrix for more than 2 years, creating various implementations wi
 
 After the Matrix.org security breach, when an unauthorised person gained access to personal and private data, we believe this review to be critical and necessary on topics not often discussed.
 
-#### Purpose and Scope
+### Purpose and Scope
 
 In this document, we will attempt to answer the following questions:
 
@@ -72,7 +72,7 @@ Matrix.org only gives self-hosting recommendations for client, Home and Identity
 
 **Many people looking into Matrix are in dire need of privacy and security: activists, journalists, minorities, etc.  It is crucial that they are informed about possible privacy leaks that could later be used to identify them. Such identification usually leads to abuse, harassment, assault, threats, blackmail. It is crucial that users are not mislead. It is equally crucial that they are able to evaluate the real value of the ecosystem when used in a daily, real-world setting.**
 
-#### Setup
+### Setup
 
 The following stack will be used as reference, with users connecting via web, desktop and smartphone clients:
 
@@ -121,7 +121,7 @@ At this point, if we are to cancel and enter an email address in fear to be lock
 
 - The given email address.
 - When submitting the token via HTTP request directly to the Identity server:
-  - The IP of the user.
+  - The IP address of the user.
   - Browser/app information via HTTP header `User-Agent`.
   - Any other information sent by browsers by default.
 - The Matrix ID of the user, usually including their username, is also made public without any authentication under the [lookup endpoint](https://matrix.org/docs/spec/identity_service/r0.1.0.html#get-matrix-identity-api-v1-lookup) on https://vector.im.
@@ -149,12 +149,9 @@ Riot therefore uses, by default, a for-profit service that has no related privac
 One of the other default settings is a Matrix ID for the Welcome Bot feature. This feature automatically creates a direct chat with an automated program controlling a Matrix user, allowing a user without prior Matrix experience to ask questions and get useful links. The Matrix ID of the user is `@riot-bot:matrix.org`. Upon inviting the user, a request will be made by the user Homeserver to the `matrix.org` Homeserver, allowing the collection of the following information:
 
 - The Matrix ID of the user, built from their username, and which Homeserver/domain they are using.
-
 - The date and time at which the account was created.
-
-- The IP/hostname of the server connected to the user, which might allow to identify a user in case of a single-user Homeserver.
-
-- From the Homeserver IP, their potential GeoIP country/city.
+- The IP address/hostname of the server connected to the user, which might allow to identify a user in case of a single-user Homeserver.
+- From the Homeserver IP address, their potential GeoIP country/city.
 
   
 
@@ -176,7 +173,7 @@ More worryingly, a central server has control over the associations between Emai
 
 #### Adding an Email
 
-When attempting to add an *Email* to the Settings, a request is made to the Homeserver to validate and add it. This request is proxied to the Identity server, hiding the IP and any info in the headers from the Identity server.
+When attempting to add an *Email* to the Settings, a request is made to the Homeserver to validate and add it. This request is proxied to the Identity server, hiding the IP address and any info in the headers from the Identity server.
 
 The Identity server then sends a validation token either in the form of a browser link, or a code to input. In case of email, a link is provided directly pointing to the Identity server instead of the Homeserver. Upon validation, you go back into Riot and click on "Continue" which triggers the final step of actually linking the Matrix ID and the *Email*.
 
@@ -184,7 +181,7 @@ While Matrix sets publishing the association to the Identity server [off by defa
 
 The following information is shared with a 3rd-party:
 
-- The IP of the user.
+- The IP address of the user.
 - Its Matrix ID.
 
 The following information is made queryable without restriction to anyone:
@@ -202,7 +199,7 @@ Searching for users is divided into two main use cases:
 - A [single, specific search](https://matrix.org/docs/spec/identity_service/r0.2.0.html#get-matrix-identity-api-v1-lookup) available in all Riot versions.
 - A [bulk search of contacts](https://matrix.org/docs/spec/identity_service/r0.2.0.html#post-matrix-identity-api-v1-bulk-lookup) to find any match, only available in smartphone versions.
 
-Those searches use unauthenticated Identity server endpoints that Riot directly connects to, allowing the user IP and its device/Riot version to be visible for each request.
+Those searches use unauthenticated Identity server endpoints that Riot directly connects to, allowing the user IP address and its device/Riot version to be visible for each request.
 
 While the single specific search behaviour may or may not be understood by users and system administrators, and that potentially identifiable data is shared with `vector.im`, it is recognised that such requests are only made in response to explicit requests from the user. The various FAQs are unambiguous that Identity servers are used for this purpose.
 
@@ -214,7 +211,7 @@ The undocumented behaviour is that **any time the user switches out then back in
 
 This bulk behaviour allows the Identity server to:
 
-- Know the IP, client and system of the user.
+- Know the IP address, client and system of the user.
 - Know the potentially complete social graph of the user.
 - Receive personal Identifiers (Email and Phone numbers) sent without obfuscation from users unaware of such sharing.
 - Receive requests matching pattern usage for the user, specific to certain devices types (smartphones).
@@ -255,12 +252,12 @@ No information or explanation is given to the user about their Matrix ID, a pote
 What is less known is that step 2 happens **every time a user switches to another room in the UI.** This means that `vector.im` is receiving the following information without the user's knowledge, some without the user even opening the Integration server window:
 
 - A steady stream of requests directly related to user activity and usage pattern of Riot and Matrix.
-- Their Matrix ID and their IP, Riot directly connecting to `scalar.vector.im`.
+- Their Matrix ID and their IP address, Riot directly connecting to `scalar.vector.im`.
 - The rooms which the user is part of.
 
 ---
 
-In terms of Integration usage of the `scalar.vector.im`, several bridges, bots, widgets and sticker packs are provided via the `matrix.org` Homeserver. It means that by using nearly any of them, `matrix.org` will be involved directly or indirectly into the room. In case of bridges and bots, a copy of the room history alongside members' display names and avatars will be known/copied to the `matrix.org` server, further giving a mean to directly access data and conversations.
+In terms of Integration usage of the `scalar.vector.im`, several bridges, bots, widgets and sticker packs are provided via the `matrix.org` Homeserver. It means that by using nearly any of them, `matrix.org` will be involved directly or indirectly into the room. In case of bridges and bots, a copy of the room history alongside members' display names and avatars will be known/copied to the `matrix.org` server, further giving a means to directly access data and conversations.
 
 **The tight coupling of `matrix.org` on those servers is never explicitly explained to the users, nor that past chat history could be downloaded in some cases without them being aware, or that any outage to the `matrix.org` server would also affect those services.**
 
@@ -369,7 +366,7 @@ Due to the difficulty of adding new ones, system administrators tend to either l
 
 ## Usage of Matrix.org and Vector.im
 
-All services (hosted under `matrix.org`, `vector.im` and `scalar.vector.im`) are going through [Cloudfare](https://en.wikipedia.org/wiki/Cloudflare), a US-based CDN. TLS termination is done at the Cloudfare level, allowing them to decrypt and see in clear all the traffic coming in and out.
+All services (hosted under `matrix.org`, `vector.im` and `scalar.vector.im`) are going through [Cloudflare](https://en.wikipedia.org/wiki/Cloudflare), a US-based CDN. TLS termination is done at the Cloudflare level, allowing them to decrypt and see in clear all the traffic coming in and out.
 
 It is important to put this information in perspective of all the data/metadata shared given all the points above, allowing a foreign 3rd-party to directly have access to plain text traffic, private identifier, data and metadata without ever being mentioned anywhere.
 
@@ -391,7 +388,7 @@ While the security breach was not in of the Matrix protocol, other Homeservers *
 - No push service, with direct impact to users (we were affected) for 24h+ reported to us.
 - No bridges/bots/widgets hosted on the `matrix.org` Homeserver.
 
-The announcement does not mention anything about collected data from Homeservers as part of the natural behaviour of the network, even thought "*the attacker did have access to the production database*".
+The announcement does not mention anything about collected data from Homeservers as part of the natural behaviour of the network, even though, "*the attacker did have access to the production database*".
 
 In terms of personal identifiers like emails and phone numbers, you can read:
 
@@ -401,11 +398,11 @@ In terms of personal identifiers like emails and phone numbers, you can read:
 
 While technically correct, Identity data as most commonly understood is also present in the Homeserver database which **was** accessed by the attacker. They eventually posted a screenshot of various commands ran on a DB extracts: how much the attacker actually accessed is unclear given the Matrix.org communication.
 
-Finally, on the 12th of April, the attacker used collected credentials (before being locked out) to take control of Cloudfare and pointing matrix.org to another website. The communication is not clear if the defacement affected the `/_matrix` API endpoints and its data coming from others servers.
+Finally, on the 12th of April, the attacker used collected credentials (before being locked out) to take control of Cloudflare and pointing matrix.org to another website. The communication is not clear if the defacement affected the `/_matrix` API endpoints and its data coming from others servers.
 
 ### Privacy and Security Impact
 
-Taking into account all the data and metadata flowing to `matrix.org`, the security breach is a concerning event as an attacker had means to collect and process those data mostly found in system/application logs, database and reverse proxy logs. Such data could also be actively collected via a traffic sniffing of any sort if the TLS-terminated traffic at Cloudfare also flow unencrypted into the internal infrastructure.
+Taking into account all the data and metadata flowing to `matrix.org`, the security breach is a concerning event as an attacker had means to collect and process those data mostly found in system/application logs, database and reverse proxy logs. Such data could also be actively collected via a traffic sniffing of any sort if the TLS-terminated traffic at Cloudflare also flow unencrypted into the internal infrastructure.
 
 The attacker could also have directly disrupted the federation in a significant manner via Denial of Service and cryptographic  poisoning for the Notary and Push services. The attacker had access to hypothetical private room messages in which Integration services are used like bots or bridges.
 
