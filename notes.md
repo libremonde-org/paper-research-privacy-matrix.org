@@ -388,7 +388,7 @@ While the security breach was not in of the Matrix protocol, other Homeservers *
 - No push service, with direct impact to users (we were affected) for 24h+ reported to us.
 - No bridges/bots/widgets hosted on the `matrix.org` Homeserver.
 
-The announcement does not mention anything about collected data from Homeservers as part of the natural behaviour of the network, even thought "*the attacker did have access to the production database*".
+The announcement does not mention anything about collected data from Homeservers as part of the natural behaviour of the network, even though, "*the attacker did have access to the production database*".
 
 In terms of personal identifiers like emails and phone numbers, you can read:
 
