@@ -48,7 +48,7 @@ Having studied Matrix for more than 2 years, creating various implementations wi
 
 After the Matrix.org security breach, when an unauthorised person gained access to personal and private data, we believe this review to be critical and necessary on topics not often discussed.
 
-#### Purpose and Scope
+### Purpose and Scope
 
 In this document, we will attempt to answer the following questions:
 
@@ -72,7 +72,7 @@ Matrix.org only gives self-hosting recommendations for client, Home and Identity
 
 **Many people looking into Matrix are in dire need of privacy and security: activists, journalists, minorities, etc.  It is crucial that they are informed about possible privacy leaks that could later be used to identify them. Such identification usually leads to abuse, harassment, assault, threats, blackmail. It is crucial that users are not mislead. It is equally crucial that they are able to evaluate the real value of the ecosystem when used in a daily, real-world setting.**
 
-#### Setup
+### Setup
 
 The following stack will be used as reference, with users connecting via web, desktop and smartphone clients:
 
