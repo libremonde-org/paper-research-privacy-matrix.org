@@ -223,11 +223,14 @@ This bulk behaviour allows the Identity server to:
 
 Recent versions of Riot have a "Sharing" icon, made of three dots linked together in the shape of a triangle. Riot also has a "Share message" option. Both open a new dialog with a URL starting with https://matrix.to/ and a QR code.
 
-Technically, "sharing" (permalinks) is built around a website https://matrix.to/ instead of a URI scheme. While the website is stateless, a cookie is set on each visit by Cloudfare. This cookie uniquely identifies clients for an unknown purpose. If the link is visited instead of intercepted by the client, the following info is shared with a 3rd party:
+Technically, "sharing" (permalinks) is built around a website https://matrix.to/ instead of a URI scheme. While the website is stateless, [a cookie](https://support.cloudflare.com/hc/en-us/articles/360024915491) is set on each visit by Cloudfare. This cookie uniquely identifies clients even thought the website is supposed to be privacy-oriented and not track users/requests.
+
+If the link is visited instead of intercepted by the client, the following info is shared:
 
 - IP address of the client/user.
+- Browsers headers containing device and system information.
 - Usage patterns of the "Sharing feature".
-- Unique ID via cookie `_cfduid` for the sole purpose to identify a client, on a website that is supposed to protect privacy.
+- Value of the Cloudflare cookie `_cfduid`.
 
 ### Integration server
 
@@ -332,7 +335,7 @@ In terms of privacy and access security, it has two major issues:
 - It is not possible to delete/remove a file from the repository using the [regular Client API](https://matrix.org/docs/spec/client_server/r0.5.0.html#id111).
 - Files are directly accessible via a [public, unauthenticated endpoint/URL](https://matrix.org/docs/spec/client_server/r0.5.0.html#get-matrix-media-r0-download-servername-mediaid).
 
-Each file is given a random ID. While IDs can't be guessed, there is no protection against listing attacks where the attacker simply tries all possible IDs over several days. Each new listing would be easier than the one before using the knowledge of which IDs are already in use. Each listing would decrease in difficulty over time.
+Files are referenced using a dedicated link which never expires. A user-friendly version is also accessible via Riot and can be copied to the clipboard, and then used in any other application. While easy on the user, it gives a permanent link to a file, which can also be shared/seen by unintended entities. Given the lack of delete/remove action and lack of access control, it puts an unexpected and usually misunderstood requirement to be extremely careful if pointing to private/sensitive data.
 
 Riot does not inform the user of such lack of basic access control and privacy when uploading files to rooms. From our experience, users believe that access to files are controlled in the same way that access to those rooms is, keeping files private and inaccessible to anyone outside of a non-public room.
 
