@@ -20,7 +20,7 @@ Data sent on a potential regular basis based on a common web/desktop+smartphone 
 - Email addresses, phone numbers of the user and their contacts.
 - Associations of Email, phone numbers with Matrix IDs.
 - Usage patterns of the user.
-- IP of the user, which can give more or less precise geographical location information.
+- IP address of the user, which can give more or less precise geographical location information.
 - The user's devices and system information.
 - The other servers that users talks to.
 - Room IDs, potentially identifying the Direct chat ones and the other user/server.
@@ -121,7 +121,7 @@ At this point, if we are to cancel and enter an email address in fear to be lock
 
 - The given email address.
 - When submitting the token via HTTP request directly to the Identity server:
-  - The IP of the user.
+  - The IP address of the user.
   - Browser/app information via HTTP header `User-Agent`.
   - Any other information sent by browsers by default.
 - The Matrix ID of the user, usually including their username, is also made public without any authentication under the [lookup endpoint](https://matrix.org/docs/spec/identity_service/r0.1.0.html#get-matrix-identity-api-v1-lookup) on https://vector.im.
@@ -152,9 +152,9 @@ One of the other default settings is a Matrix ID for the Welcome Bot feature. Th
 
 - The date and time at which the account was created.
 
-- The IP/hostname of the server connected to the user, which might allow to identify a user in case of a single-user Homeserver.
+- The IP address/hostname of the server connected to the user, which might allow to identify a user in case of a single-user Homeserver.
 
-- From the Homeserver IP, their potential GeoIP country/city.
+- From the Homeserver IP address, their potential GeoIP country/city.
 
   
 
@@ -176,7 +176,7 @@ More worryingly, a central server has control over the associations between Emai
 
 #### Adding an Email
 
-When attempting to add an *Email* to the Settings, a request is made to the Homeserver to validate and add it. This request is proxied to the Identity server, hiding the IP and any info in the headers from the Identity server.
+When attempting to add an *Email* to the Settings, a request is made to the Homeserver to validate and add it. This request is proxied to the Identity server, hiding the IP address and any info in the headers from the Identity server.
 
 The Identity server then sends a validation token either in the form of a browser link, or a code to input. In case of email, a link is provided directly pointing to the Identity server instead of the Homeserver. Upon validation, you go back into Riot and click on "Continue" which triggers the final step of actually linking the Matrix ID and the *Email*.
 
@@ -184,7 +184,7 @@ While Matrix sets publishing the association to the Identity server [off by defa
 
 The following information is shared with a 3rd-party:
 
-- The IP of the user.
+- The IP address of the user.
 - Its Matrix ID.
 
 The following information is made queryable without restriction to anyone:
@@ -202,7 +202,7 @@ Searching for users is divided into two main use cases:
 - A [single, specific search](https://matrix.org/docs/spec/identity_service/r0.2.0.html#get-matrix-identity-api-v1-lookup) available in all Riot versions.
 - A [bulk search of contacts](https://matrix.org/docs/spec/identity_service/r0.2.0.html#post-matrix-identity-api-v1-bulk-lookup) to find any match, only available in smartphone versions.
 
-Those searches use unauthenticated Identity server endpoints that Riot directly connects to, allowing the user IP and its device/Riot version to be visible for each request.
+Those searches use unauthenticated Identity server endpoints that Riot directly connects to, allowing the user IP address and its device/Riot version to be visible for each request.
 
 While the single specific search behaviour may or may not be understood by users and system administrators, and that potentially identifiable data is shared with `vector.im`, it is recognised that such requests are only made in response to explicit requests from the user. The various FAQs are unambiguous that Identity servers are used for this purpose.
 
@@ -214,7 +214,7 @@ The undocumented behaviour is that **any time the user switches out then back in
 
 This bulk behaviour allows the Identity server to:
 
-- Know the IP, client and system of the user.
+- Know the IP address, client and system of the user.
 - Know the potentially complete social graph of the user.
 - Receive personal Identifiers (Email and Phone numbers) sent without obfuscation from users unaware of such sharing.
 - Receive requests matching pattern usage for the user, specific to certain devices types (smartphones).
@@ -252,7 +252,7 @@ No information or explanation is given to the user about their Matrix ID, a pote
 What is less known is that step 2 happens **every time a user switches to another room in the UI.** This means that `vector.im` is receiving the following information without the user's knowledge, some without the user even opening the Integration server window:
 
 - A steady stream of requests directly related to user activity and usage pattern of Riot and Matrix.
-- Their Matrix ID and their IP, Riot directly connecting to `scalar.vector.im`.
+- Their Matrix ID and their IP address, Riot directly connecting to `scalar.vector.im`.
 - The rooms which the user is part of.
 
 ---
