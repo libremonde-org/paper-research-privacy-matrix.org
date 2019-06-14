@@ -1,4 +1,5 @@
 # Notes on privacy and data collection of Matrix.org
+This work is licensed under [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
 
 > **DISCLAIMER:** This research and investigation work is based on several years of experience within the Matrix ecosystem and validation of facts via public and private communication. Reverse engineering was used to ensure some of the statements presented as facts regarding implementations are accurate.
 >
