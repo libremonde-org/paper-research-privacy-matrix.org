@@ -257,7 +257,7 @@ What is less known is that step 2 happens **every time a user switches to anothe
 
 ---
 
-In terms of Integration usage of the `scalar.vector.im`, several bridges, bots, widgets and sticker packs are provided via the `matrix.org` Homeserver. It means that by using nearly any of them, `matrix.org` will be involved directly or indirectly into the room. In case of bridges and bots, a copy of the room history alongside members' display names and avatars will be known/copied to the `matrix.org` server, further giving a mean to directly access data and conversations.
+In terms of Integration usage of the `scalar.vector.im`, several bridges, bots, widgets and sticker packs are provided via the `matrix.org` Homeserver. It means that by using nearly any of them, `matrix.org` will be involved directly or indirectly into the room. In case of bridges and bots, a copy of the room history alongside members' display names and avatars will be known/copied to the `matrix.org` server, further giving a means to directly access data and conversations.
 
 **The tight coupling of `matrix.org` on those servers is never explicitly explained to the users, nor that past chat history could be downloaded in some cases without them being aware, or that any outage to the `matrix.org` server would also affect those services.**
 
