@@ -404,7 +404,7 @@ Finally, on the 12th of April, the attacker used collected credentials (before b
 
 ### Privacy and Security Impact
 
-Taking into account all the data and metadata flowing to `matrix.org`, the security breach is a concerning event as an attacker had means to collect and process those data mostly found in system/application logs, database and reverse proxy logs. Such data could also be actively collected via a traffic sniffing of any sort if the TLS-terminated traffic at Cloudflare also flow unencrypted into the internal infrastructure.
+Taking into account all the data and metadata flowing to `matrix.org`, the security breach is a concerning event as an attacker had means to collect and process those data mostly found in system/application logs, database and reverse proxy logs.
 
 The attacker could also have directly disrupted the federation in a significant manner via Denial of Service and cryptographic  poisoning for the Notary and Push services. The attacker had access to hypothetical private room messages in which Integration services are used like bots or bridges.
 
