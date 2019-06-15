@@ -52,6 +52,8 @@ After the Matrix.org security breach, when an unauthorised person gained access 
 
 ### Purpose and Scope
 
+**This document is a research paper for [The Grid Protocol](https://gitlab.com/thegridprotocol/home#the-grid) project, a fork of the Matrix protocol. Privacy is a core value of the project. This is an effort to document privacy points from our parent project, which can then be used to create guidelines/recommendations on what to do. It will be used for our own governing body/landing website and to evaluate Grid implementations for their priority for privacy.**
+
 In this document, we will attempt to answer the following questions:
 
 - Following the Matrix.org client/server recommendations/guides, can you be sure that your privacy is respected and your data secure?
