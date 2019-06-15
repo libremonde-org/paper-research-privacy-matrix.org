@@ -376,7 +376,7 @@ It is important to put this information in perspective of all the data/metadata 
 
 ### Timeline and events
 
-For those unaware, Matrix.org was breached by an attacker for several days which triggered service downtime and a full rebuild of the Matrix.org infrastructure. Many people were amazed to see how this did not impact their services and they could continue to talk to others without interruptions and their data was safe on their own servers. That being true for most people, the reality was not so straight-forward.
+For those unaware, Matrix.org was breached by an attacker for several days which triggered service downtime and a full rebuild of the Matrix.org infrastructure. Some people were amazed to see how this did not impact their Homeserver and they could continue to talk to others without interruptions and their data was safe on their own servers. That being true for some people, the reality was not so straight-forward.
 
 On their [initial communication](https://matrix.org/blog/2019/04/11/we-have-discovered-and-addressed-a-security-breach-updated-2019-04-12), they say:
 
