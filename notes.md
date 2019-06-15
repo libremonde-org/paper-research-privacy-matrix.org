@@ -164,7 +164,7 @@ Identity servers are one of the most misunderstood services in Matrix. Contrary 
 While Matrix.org does not recommend self-hosting Identity servers, they deal with several key behaviours and personal identifiers:
 
 - Adding/Removing an *Email* to one's profile for discovery by other users.
-- Adding an *Email* to allow password reset of an account, being the only self-service way to regain control back after forgetting your password.
+- Adding an *Email* to allow password reset of an account. Email is the only self-service way to regain control back after forgetting your password.
 - Search for other users to connect with by looking up their *Email*.
 
 Control of the `vector.im` and/or `matrix.org` server allows several Denial of Services in terms of blocking 3PID associations and finding other people.
