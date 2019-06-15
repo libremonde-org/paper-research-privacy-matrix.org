@@ -282,7 +282,7 @@ While Riot gives the high level differences between the two, it does not mention
 
 The Push server will have access to the following info in each notification:
 
-- The user Matrix ID.
+- The app ID and The push key, which could uniquely identify a user
 - The room ID.
 - The event ID.
 
