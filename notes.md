@@ -397,6 +397,7 @@ On their [initial communication](https://matrix.org/blog/2019/04/11/we-have-disc
 While the security breach was not in of the Matrix protocol, other Homeservers **were** affected by it. As per our analysis above, we know that people hosting a typical stack would have the following services not available to them:
 
 - No key signature verification via notary, without visible impact to users.
+- [Identity services based on `vector.im`](https://git.feneas.org/feneas/association/issues/51)
 - No push service, with direct impact to users (we were affected) for 24h+ reported to us.
 - No bridges/bots/widgets hosted on the `matrix.org` Homeserver.
 
