@@ -148,6 +148,27 @@ From our experience in the Matrix.org community and various discussion with the 
 
 Riot therefore uses, by default, a for-profit service that has no related privacy policy, sharing Personal Identifiable data with a 3rd-party without informing its users, while relying on the trust of a Matrix.org recommendation.
 
+### Devices
+
+Riot is a End-to-End encryption (*E2EE*) capable client. *E2EE* is based on devices, representing the clients from where users connect to Matrix. The term *Device* is used for other specifics in Matrix: This section specifically covers *E2EE* devices.
+
+*E2EE* is a highly-sought feature that allow to encrypt (hide) the content of the events flowing on the network. *E2EE* does not encrypt metadata in Matrix, only what is referred to as `content` . Content is what you say. Metadata are things like the user who sent it (Matrix ID), the time, its origin (Server ID). Matrix.org regularly talks about it [on their blog](https://matrix.org/blog/) and, while it is not enabled by default, rightfully promotes it as a key feature of Matrix.
+
+For *E2EE* to work as intended and make sense, users are prompted to validate other users' devices when they talk with them in an encrypted room. As people login in and out, devices changes and users need to re-validate which devices they trust where encrypted messages should be sent.
+
+A *E2EE* device has one directly visible attribute: its name. This name can be **optionally** set [during login](https://matrix.org/docs/spec/client_server/r0.5.0#post-matrix-client-r0-login) and [manually later on]() by the user. In Riot, if you are to click on a user avatar, or click on a Matrix ID in a message, the right panel will show the user profile including its devices and their names. There is no restriction on getting the devices list, and a user can see the devices list of any other user on the network [if their respective servers can communicate](https://matrix.org/docs/spec/server_server/r0.1.2#get-matrix-federation-v1-user-devices-userid).
+
+By default Riot sets the device name to contain some or all of these attributes:
+
+- If Web, Desktop or Smartphone.
+- The URL where it is hosted and the browser used (if applicable).
+- The system name.
+- The smartphone model (if applicable).
+
+Given the default name set by Riot on login, and the lack of restriction on fetching the *E2EE* device names list, **users who do not change their device names are exposing those attributes for anyone to query, track and process. In the case of the URL, more information could be gathered, like the default configuration of Riot for sensitive services like the Identity Server of the user.**
+
+**Riot does not inform the user or request consent before using sensitive information to set a device name, even if the device name is optional. It also does not recommend changing the device name on first use or after login. Because *E2EE* is currently disabled by default, users do not get to validate devices and see those names either, which could help them being informed on the matter.**
+
 ### Welcome Bot
 
 One of the other default settings is a Matrix ID for the Welcome Bot feature. This feature automatically creates a direct chat with an automated program controlling a Matrix user, allowing a user without prior Matrix experience to ask questions and get useful links. The Matrix ID of the user is `@riot-bot:matrix.org`. Upon inviting the user, a request will be made by the user Homeserver to the `matrix.org` Homeserver, allowing the collection of the following information:
@@ -303,7 +324,7 @@ These keywords are those personal triggers a user can configure, topics, words t
 
 Push notifications contain the Room ID and Event ID which make up the global unique identifier of an event. If the entity running the push server has also access to the room and the event, they are able to know the content of the notification that will be seen by the user, even if the notification itself does not contain it.
 
-By keeping track of which events triggered a notification for a user, in the case where the entity has access to the event, they have the possibility to extrapolate the keywords given enough notifications. The more rooms a server is joined to, the more effective and accurate this would be. As one of the biggest servers known in the public federation, `matrix.org` would be a prime location for such data processing.
+**By keeping track of which events triggered a notification for a user, in the case where the entity has access to the event, they have the possibility to extrapolate the keywords given enough notifications. The more rooms a server is joined to, the more effective and accurate this would be.** As one of the biggest servers known in the public federation, `matrix.org` would be a prime location for such data processing.
 
 ## Synapse, the reference server implementation
 
