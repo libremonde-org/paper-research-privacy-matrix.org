@@ -465,7 +465,14 @@ That you'll be able to make an educated and informed decision when choosing whic
 
 To discuss further, come to our Matrix room: `#kamax-matrix:kamax.io`.
 
-*- The [Kamax.io](https://www.kamax.io/) Team*
+## Editorial notes
+
+**Authors:** The [Kamax.io](https://www.kamax.io/) Team - [Maximus](https://github.com/maxidorius) and mkatee  
+**Reviewers:** [Slavi](https://github.com/spantaleev), [mujx](https://github.com/mujx), Juuso "Linda" Lapinlampi
+
+Special thanks to the following people who provided significant feedback post-publication:
+
+- [Tulir Asokan](https://maunium.net/)
 
 ---
 
