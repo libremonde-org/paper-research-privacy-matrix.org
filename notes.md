@@ -295,7 +295,15 @@ And overall:
 
 Control of the `matrix.org` push server allows to perform Denial of Service, blocking notifications that people tend to rely on to further participate in conversations when a reply is sent. See below for a real-word impact during the security breach.
 
+#### Push Rules: Keywords, Highlights and Notifications
 
+In Riot settings, under *Notifications*, you will find "Messages containing keywords" with a link allowing to set arbitrary words/patterns that will specifically trigger highlights, in terms sending Push Notifications to your smartphone with the default configuration of enabled notifications.
+
+These keywords are those personal triggers a user can configure, topics, words that are personal/specific to them on top of what the protocol itself provides. These keywords might contain private topics, name, interests, political choices, etc.
+
+Push notifications contain the Room ID and Event ID which make up the global unique identifier of an event. If the entity running the push server has also access to the room and the event, they are able to know the content of the notification that will be seen by the user, even if the notification itself does not contain it.
+
+By keeping track of which events triggered a notification for a user, in the case where the entity has access to the event, they have the possibility to extrapolate the keywords given enough notifications. The more rooms a server is joined to, the more effective and accurate this would be. As one of the biggest servers known in the public federation, `matrix.org` would be a prime location for such data processing.
 
 ## Synapse, the reference server implementation
 
