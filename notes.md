@@ -473,6 +473,7 @@ To discuss further, come to our Matrix room: `#kamax-matrix:kamax.io`.
 Special thanks to the following people who provided significant feedback post-publication:
 
 - [Tulir Asokan](https://maunium.net/)
+- [Jason Volk](https://github.com/jevolk)
 
 ---
 
