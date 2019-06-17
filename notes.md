@@ -467,7 +467,7 @@ To discuss further, come to our Matrix room: `#kamax-matrix:kamax.io`.
 
 ## Editorial notes
 
-**Authors:** The [Kamax.io](https://www.kamax.io/) Team - [Maximus](https://github.com/maxidorius) and mkatee  
+**Authors:** The [Kamax.io](https://www.kamax.io/) Team - [Maximus](https://github.com/maxidorius) and [mkatee](https://github.com/mkatee)  
 **Reviewers:** [Slavi](https://github.com/spantaleev), [mujx](https://github.com/mujx), Juuso "Linda" Lapinlampi
 
 Special thanks to the following people who provided significant feedback post-publication:
