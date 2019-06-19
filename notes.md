@@ -409,6 +409,94 @@ Whichever STUN server is used, they would have access to:
 
 
 
+### Basic network calls
+
+#### Headers
+
+Throughout this document, we refer to concepts such as *HTTP headers*, *Browser information* and *system version*. These terms are usually obscure to most people but are one of the most common privacy leaks. They do not really provide usable information by themselves. Instead, **they are key elements to process when correlating various sources if the intent of a malicious 3rd party is to identify a person or deanonymize submitted analytics.**
+
+Some of those headers can be redacted/removed in the HTTP libraries used in software, but cannot in web-apps.
+Given the complex and technical nature of HTTP headers and the ability of the various software to control them, this document will limit the scope of this section to their value.
+
+**Except for the Original header, none of these headers matter for the Matrix protocol. Some might allow to improve the user experience (e.g. Accept-Language).**
+
+##### Origin
+
+> **NOTE:** This header is specific to Riot Web and Riot Desktop
+
+[`Origin`](https://en.wikipedia.org/wiki/List_of_HTTP_header_fields#origin-request-header) is a standard mandatory header used in [CORS](https://en.wikipedia.org/wiki/Cross-origin_resource_sharing) to request the various `Access-Control-*` headers.
+
+`Origin` is set to the protocol, hostname/IP address and optional port where the content is hosted. In case of Riot Web, it would be something like `https://riot.example.org`. In case of Riot Desktop, it is `vector://vector`.
+
+**This mandatory header will therefore inform the server about the location where the client is currently hosted, or that it is Desktop version. This can also contain non-public hostnames, IP addresses, etc.**
+
+Per example, this information could be used to:
+
+- Identify weaker setup that use HTTP.
+- Trace back a request to a Homeserver domain, inferred from where Riot-Web is hosted.
+- Identify the device type of a user: Web or Desktop.
+- Perform discovery of a domain Matrix setup, by reading the host `config.json`  if it is available at the root of the domain: Homeserver URL, Identity Server URL, Integration server, etc.
+
+##### Referer
+
+> **NOTE:** This header is specific to Riot Web
+
+[`Referer`](https://en.wikipedia.org/wiki/HTTP_referer) is an optional HTTP header. It is very similar to `Origin` except it contains the URL of the page from where the request was made. This header [is typically used when tracking users](https://en.wikipedia.org/wiki/HTTP_referer#Details).
+
+**This header gives a more precise value than `Origin`, and would give more accurate results in tracing back to the original client and related configuration.**
+
+##### Accept-Language
+
+[`Accept-Language`](https://en.wikipedia.org/wiki/Content_negotiation#Server-driven) is a header that informs the server about the preferred language that should be used for the content: English, French, etc. By default, this header is set to the installation language/system language.
+
+**This header gives [demographic data](https://en.wikipedia.org/wiki/Demography).**
+
+##### User-Agent
+
+> **NOTE:** Examples are taken from the GitHub issue [vector-im/riot-meta#295](https://github.com/vector-im/riot-meta/issues/295).
+
+[`User-Agent`](https://en.wikipedia.org/wiki/User_agent#Use_in_HTTP) is set to the software and system version/type, allowing a server to give the most appropriate content for that software. One typical use is to detect graphical browser from command line browser, and output the best format for a specific content. Per example, the graphical browser would receive an image while a command line browser its alternate text.
+
+These are examples of the value in each Riot version:
+
+---
+
+Web:
+
+```
+Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:67.0) Gecko/20100101 Firefox/67.0
+```
+
+Desktop:
+
+```
+Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Riot/1.2.1 Chrome/69.0.3497.128 Electron/4.2.2 Safari/537.36
+```
+
+Android - Google Play:
+
+```
+Riot.im/0.9.1 (Linux; U; Android 5.1; Phone Model Build/precise build number incl. security patch level; Flavour GooglePlay; MatrixAndroidSDK 0.9.23)
+```
+
+Android - F-Droid:
+
+```
+Riot.im/0.8.28a (Linux; U; Android 9; Phone Model and ROM Build/precise build number incl. security patch level; Flavour FDroid; MatrixAndroidSDK 0.9.19)
+```
+
+iOS:
+
+```
+Riot/0.8.6 (iPhone; iOS 12.2; Scale/3.00)
+```
+
+---
+
+The value of this header tends to be very specific and more easily tied to users being of high value if correlation is wanted.
+
+**By default, some HTTP servers log this value, including the client IP address, allowing a direct match. These can be directly accessible in case of a security breach.**
+
 ## Synapse, the reference server implementation
 
 ### Basic network calls
