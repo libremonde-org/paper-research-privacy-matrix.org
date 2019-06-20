@@ -545,7 +545,7 @@ To discuss further, come to our Matrix room: `#kamax-matrix:kamax.io`.
 
 ## Editorial notes
 
-**CC Attribution:** [The Grid protocol](https://gitlab.com/thegridprotocol/home/blob/master/README.md#the-grid) community
+**CC Attribution:** [The Grid protocol](https://gitlab.com/thegridprotocol/home/blob/master/README.md#the-grid) community  
 **Authors:** The [Kamax.io](https://www.kamax.io/) Team - [Maximus](https://github.com/maxidorius) and [mkatee](https://github.com/mkatee)  
 **Reviewers:** [Slavi](https://github.com/spantaleev), [mujx](https://github.com/mujx), Juuso "Linda" Lapinlampi
 
