@@ -62,7 +62,7 @@ In this document, we will attempt to answer the following questions:
 - Are the default/recommended client/server explicit about where the data is flowing, which 3rd party is it shared with?
 - Given the recent security breach of Matrix.org, what kind of information was accessed?
 
-To do so, we will follow the most common setup and [the ones recommended by Matrix.org itself for self-hosting](https://matrix.org/faq/#self-hosting):
+To do so, we will follow the most common setup and [the ones recommended by Matrix.org itself for self-hosting](https://web.archive.org/web20190616122919/http://matrix.org/faq/#self-hosting):
 
 - Self-hosting/installing your own client.
 - Self-hosting your Homeserver.
@@ -83,13 +83,29 @@ The following stack will be used as reference, with users connecting via web, de
 - Client: Riot-web [v1.2.1](https://github.com/vector-im/riot-web/releases/tag/v1.2.1), Riot Desktop [v1.2.1](https://github.com/vector-im/riot-web/releases/tag/v1.2.1), Riot Android [v0.9.1](https://github.com/vector-im/riot-android/releases/tag/v0.9.1)
 - Server: Synapse [v1.0.0](https://github.com/matrix-org/synapse)
 
-Riot has been chosen following the big promotion under "Try now" on Matrix.org, appearing on the dedicated landing page with the hereafter quote and being the first and second recommendation in Clients.
+This choice of client and server matches our knowledge and experience that it is representative of the overwhelming majority of the Matrix ecosystem.
+
+#### Client choice
+
+Riot has been chosen following its wide and repeated promotion on the Matrix.org website.
+
+First, under [the predominant "Try now" button](https://web.archive.org/web20190620111226/http://matrix.org/) on Matrix.org on the top right corner. This button leads to [a dedicated landing page](https://web.archive.org/web20190620115310/http://matrix.org/try-now/) with the hereafter quoted first sentence:
 
 > The easiest way to try Matrix is to use the [Riot Web](https://about.riot.im/) client in your browser
 
-Synapse has been chosen because it is the first recommendation on the Matrix.org website, and is the only server feature-complete enough to be used on a day-to-day basis.
+The page contains, at the bottom, a less noticeable sentence and link:
 
-This choice of client and server matches our knowledge and experience that it is representative of the overwhelming majority of the Matrix ecosystem.
+> Alternatively, you can find more clients and servers in [Discover](https://web.archive.org/web20190620115310/http://matrix.org/try-now/).
+
+Second, The [Discover page](https://web.archive.org/web20190620121329/http://matrix.org/docs/projects/try-matrix-now/) is made of a filterable list of all known implementations which would allow a user to know about all available clients. The page itself list *Riot* and *Riot for Android and iOS* as first and second options in a manner which is clearly and directly noticeable. The first sentence of the page reads:
+
+> To get started using Matrix, pick a client and join [#matrix:matrix.org](https://web.archive.org/web/20190620122127/https://matrix.to/). You can also check the [Matrix Clients Matrix](https://web.archive.org/web20190620122151/http://matrix.org/docs/projects/clients-matrix/) to see more detail.
+
+Finally, The [Matrix Clients Matrix](https://web.archive.org/web20190620122151/http://matrix.org/docs/projects/clients-matrix/) page also list *Riot Web*, *Riot Android*, *Riot iOS* in first positions in their "compare" tables.
+
+#### Server choice
+
+Synapse has been chosen because it is the first server implementation listed on the [Discover page](), and is the only server feature-complete enough to be used on a day-to-day basis.
 
 
 
