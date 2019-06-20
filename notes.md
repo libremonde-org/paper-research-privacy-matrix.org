@@ -2,7 +2,7 @@
 
 ---
 
-**This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).**
+**This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).** See [here](#editorial-notes) for Attribution details.
 
 ---
 
@@ -525,18 +525,21 @@ That you'll be able to make an educated and informed decision when choosing whic
 
 To discuss further, come to our Matrix room: `#kamax-matrix:kamax.io`.
 
+
+
 ## Editorial notes
 
+**CC Attribution:** [The Grid protocol](https://gitlab.com/thegridprotocol/home/blob/master/README.md#the-grid) community
 **Authors:** The [Kamax.io](https://www.kamax.io/) Team - [Maximus](https://github.com/maxidorius) and [mkatee](https://github.com/mkatee)  
 **Reviewers:** [Slavi](https://github.com/spantaleev), [mujx](https://github.com/mujx), Juuso "Linda" Lapinlampi
 
-Special thanks to the following people who provided significant feedback post-publication:
+Special thanks to the following people who provided significant feedback pre and post-publication:
 
 - [Tulir Asokan](https://maunium.net/)
 - [Jason Volk](https://github.com/jevolk)
 
 ---
 
-**This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).**
+**This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).** See [here](#editorial-notes) for Attribution details.
 
 ---
