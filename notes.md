@@ -2,7 +2,7 @@
 
 ---
 
-**This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).** See [here](#editorial-notes) for Attribution details.
+**This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).** See [Editorial Notes](#editorial-notes) for Attribution details.
 
 ---
 
@@ -651,6 +651,6 @@ Special thanks to the following people who provided significant feedback pre and
 
 ---
 
-**This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).** See [here](#editorial-notes) for Attribution details.
+**This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).** See [Editorial notes](#editorial-notes) for Attribution details.
 
 ---
