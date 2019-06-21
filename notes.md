@@ -348,7 +348,7 @@ Push notifications contain the Room ID and Event ID which make up the global uni
 
 > **NOTE:** *Call* will be used to refer to audio or video in 1:1 situation and does not cover widgets.
 
-​	[VoIP calls in Matrix](https://matrix.org/docs/spec/client_server/r0.5.0#voice-over-ip) are based on [WebRTC](https://en.wikipedia.org/wiki/WebRTC) who was designed by the main actors of the web (Mozilla, Google, etc.) to give websites/webapps a mean to do VoIP in an native way and directly in the browser without a need for plugins/extensions.
+[VoIP calls in Matrix](https://matrix.org/docs/spec/client_server/r0.5.0#voice-over-ip) are based on [WebRTC](https://en.wikipedia.org/wiki/WebRTC) which was designed by the main actors of the web (Mozilla, Google, etc.) to give websites/web-apps a mean to do VoIP in a native way and directly in the browser without a need for plugins/extensions.
 
 If you are already familiar with VoIP, STUN and TURN, [you can skip to the Matrix bit](#in-matrix).
 
@@ -359,25 +359,23 @@ VoIP in general, WebRTC included, make call happen using two principles:
 - Signalling channel: This is how the devices/clients will send messages about the call, like "I am placing a call", "These are my media channels and my codecs" or "I'm hanging up". This is also where SDP data is exchanged. We will explain SDP in a second.
 - Media channel(s): This is where you'll find the actual voice/video data that you will hear/see.
 
-VoIP is very sensitive to slow and unstable network connections or delays for media, but at the same time you don't need to get **all** the data. Because VoIP is real-time, if you miss one sound or one image, or get it out of order, you can't really render it after - it's just too late. you just render as data comes in.
+VoIP is very sensitive to slow and unstable network connections or delays for media, but at the same time not **all** data is needed for rendering. Because VoIP is real-time, a missing/out of order sound/video frame cannot be rendered as the next ones have been already. It is then dropped. For sound and video to work and be useful to humans, there cannot be a lot of delay either due to their real-time nature.
 
-And for sound and image to work, data needs to be in order, and that it doesn't take a long time to be sent. Nobody likes calling someone else and have to wait seconds for them to hear and start answering!
+The best way to accomplish this is to have both clients connect to each other. This ensures the shortest and fastest path (no server in the middle to use and depend on) is used to transmit data. To do so they need to find out their IP addresses and have an incoming port open. Because of NAT, firewall restrictions, network access on smartphone on Data network or any number of reasons, clients are usually not able to ensure the port is open and directed to their devices, or even know their public IP addresses in the first place. Regardless, clients following the protocol will attempt to collect as much information as possible to be sent to the other client.
 
-The best way to accomplish this is to have both clients connect to each other. They'll get the shortest and fastest path (no server in the middle to use and depend on). To do so they need to find out their IP addresses and have an incoming port open. Because of NAT, firewall restrictions, network access on smartphone on Data network or any number of reasons, clients are usually not able to ensure the port is open and directed to their devices, or even know their public IP addresses in the first place. But they'll try to collect as many info as possible to send it to the other client anyway.
+Once a client has collected all the data it can (system IP addresses, available codecs, etc.), it will place it into a well-understood message format. That format is called [SDP](https://en.wikipedia.org/wiki/Session_Description_Protocol) and is used in various other protocols, like [SIP](https://en.wikipedia.org/wiki/Session_Initiation_Protocol). The other client will do the same, usually in the "I answer the call" message. Both clients will then try to connect to each other. If they can connect, great! Your call is now working. If not, clients usually fail the call after X seconds - *could not connect media* is what you would see in Riot.
 
-Once a client has collected all the data it can (system IP addresses, available codecs, etc.) it will create a message with all of it in well-understood format. That format is called [SDP](https://en.wikipedia.org/wiki/Session_Description_Protocol) and is used in various other protocols, like [SIP](https://en.wikipedia.org/wiki/Session_Initiation_Protocol). The other client will do the same, usually in the "I answer the call" message. Both clients will then try to connect to each other. If they can connect, great! Your call is now working. If not, clients usually fail the call after X seconds - *could not connect media* is what you would see in Riot.
-
-In the real word, relying on values only visible by the clients tend to very low successful connected calls. To fix that, two things where created: [STUN](https://en.wikipedia.org/wiki/STUN) and [TURN](https://en.wikipedia.org/wiki/TURN).
+In the real world, relying on values only visible by the clients tend to very low successful connected calls. To fix that, two other protocols/tool-sets were designed: [STUN](https://en.wikipedia.org/wiki/STUN) and [TURN](https://en.wikipedia.org/wiki/TURN).
 
 STUN is a way for clients to get more info about themselves and their network connection, like their public IP address and usable port(s) for media channels. It is based on a simple, fast, light request/response mechanism. It is used just before sending the "I am placing a call" signal. The client can then include all that info in their SDP message of placing a call. While this help clients gather better info, it might have no effect.
 
-Finally, TURN allows to use a relay, a proxy of sorts, that will act like a middle man, receive data from one client and sending it back to the other. This relay is a server, and therefore client do not need to have ports open, they can just connect to the server, and then get a duplex channel to send and receive. TURN is the big gun of VoIP, it allows a very high success rate in placing calls.
+Finally, TURN allows to use a relay, a proxy of sorts, that will act like a middle man, receive data from one client and sending it back to the other. Being a relay, clients do not need to have ports open; they only need to connect to the server, which grants them a duplex channel to send and receive. TURN is the big gun of VoIP and allows a very high success rate in placing calls.
 
 #### In Matrix
 
 STUN and TURN are quite sensitive privacy-wise: As a server in both, you get to know that a client is trying to attempt a call and their IP address. As TURN, you get to know which clients are connected to each other, and you receive the encrypted data of the call.
 
-All Riot versions are currently hardcoded with [a default STUN server pointing to Google](https://github.com/vector-im/riot-meta/issues/150):
+All Riot versions are currently hardcoded with [a default STUN server pointing to Google](https://web.archive.org/web/20190621153620/https://github.com/vector-im/riot-meta/issues/150):
 
 - [Web/Desktop](https://github.com/matrix-org/matrix-js-sdk/blob/a73dabcb6735f71ece4455cf56926c5692ad4146/src/webrtc/call.js#L96)
 - [Android](https://github.com/matrix-org/matrix-android-sdk/blob/aa7b11958ea78520d8bc5fb32ce7bddabdbdb13d/matrix-sdk/src/main/java/org/matrix/androidsdk/call/MXWebRtcCall.java#L602)
@@ -385,11 +383,20 @@ All Riot versions are currently hardcoded with [a default STUN server pointing t
 
 Synapse is configured by default with [an empty set of TURN servers](https://github.com/matrix-org/synapse/blob/v1.0.0/synapse/config/voip.py#L21). Knowing that TURN is tried before STUN, **if synapse has no TURN servers configured, STUN will be attempted for each call.**
 
-The synapse documentation [has a specific entry for it](https://github.com/matrix-org/synapse/blob/v1.0.0/INSTALL.md#setting-up-a-turn-server), but does not mention the privacy aspect if no TURN server is configured and the client has a default STUN server. Our experience with the ecosystem is that people installing synapse will postpone TURN to later, or just ignore it as they just want to try synapse and just send text messages.
+The synapse's documentation [has a specific entry for it](https://github.com/matrix-org/synapse/blob/v1.0.0/INSTALL.md#setting-up-a-turn-server), but does not mention the privacy aspect if no TURN server is configured and the client has a default STUN server. Our experience with the ecosystem is that people installing synapse will postpone TURN to later, or just ignore it as they just want to try synapse and just send text messages.
 
-When they eventually do try VoIP and that it works, they will ignore or have forgotten the TURN setup. It it doesn't, some give up installing/using a TURN server as the dedicated document for it [is quite obscure](https://github.com/matrix-org/synapse/blob/v1.0.0/docs/turn-howto.rst) and hard to understand, asking the user to consider several things most sysadmins aren't familiar with at all. **It also doesn't give any specific about network configuration, which is crucial: the TURN server MUST know about its public IP address and ports MUST be opened and relayed to the TURN server. The guide does not document the public IP address configuration options nor which ports to open and assume all those are easy to figure out.**
+When they eventually do try VoIP and that it works, they will ignore or have forgotten the TURN setup. If placing voice/video calls do not work, some give up installing/using a TURN server. Our experience with users is that the [dedicated document](https://github.com/matrix-org/synapse/blob/v1.0.0/docs/turn-howto.rst) for it is quite obscure and hard to understand, asking the user to consider several things most sysadmins aren't familiar with at all:
 
-This is based on regular questions/feedback received from the community over several years, which also triggered one of the authors to write [a "straight to the point" document](https://gist.github.com/maxidorius/2b0acc2e707ae9a2d6d0267026a1024f) to help users who are lost with the various options usually alien to them.
+- Building `coturn` from source
+- To consider security settings like a black and white list of peer IPs
+
+**It also doesn't give any specific about several crucial points like network configuration or TURN TLS.**
+
+**Network configuration:** the TURN server **MUST** know about its public IP address and ports MUST be opened and relayed to the TURN server. The guide does not document the public IP address configuration options nor which ports to open and assume all those are easy to figure out.
+
+**TURN TLS:** In WebRTC, media streams are encrypted by default, protecting privacy. The TURN client/server exchange is not by default, requiring extra configuration in `coturn` and specific TURN URIs (starting with `turns:` ) to be set first in the `turn_uris` array. **The synapse's documentation does not recommend the use TURN TLS, only mentioning it as optional in step 7 of the `coturn` setup. The documentation also does not give example of TURN TLS URIs, leaving it up to the reader to figure out.**
+
+This is based on regular questions/feedback received from the community over several years, which also triggered one of the authors of this document to write [a "straight to the point" document](https://gist.github.com/maxidorius/2b0acc2e707ae9a2d6d0267026a1024f) to help users who are lost with the various options usually alien to them.
 
 Whichever STUN server is used, they would have access to:
 
