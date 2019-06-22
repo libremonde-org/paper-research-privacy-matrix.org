@@ -62,7 +62,7 @@ In this document, we will attempt to answer the following questions:
 - Are the default/recommended client/server explicit about where the data is flowing, which 3rd party is it shared with?
 - Given the recent security breach of Matrix.org, what kind of information was accessed?
 
-To do so, we will follow the most common setup and [the ones recommended by Matrix.org itself for self-hosting](https://web.archive.org/web20190616122919/http://matrix.org/faq/#self-hosting):
+To do so, we will follow the most common setup and [the ones recommended by Matrix.org itself for self-hosting](https://web.archive.org/web/20190616122919/https://matrix.org/faq/#self-hosting):
 
 - Self-hosting/installing your own client.
 - Self-hosting your Homeserver.
