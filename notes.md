@@ -578,7 +578,7 @@ It is important to put this information in perspective of all the data/metadata 
 
 ### Timeline and events
 
-For those unaware, Matrix.org was breached by an attacker for several days which triggered service downtime and a full rebuild of the Matrix.org infrastructure. Some people were amazed to see how this did not impact their Homeserver and they could continue to talk to others without interruptions and their data was safe on their own servers. That being true for some people, the reality was not so straight-forward.
+For those unaware, Matrix.org was breached by an attacker for several days which triggered [service downtime](https://web.archive.org/web/20190411123334/http://matrix.org/) and a full rebuild of the Matrix.org infrastructure. Some people were amazed to see how this did not impact their Homeserver and they could continue to talk to others without interruptions and their data was safe on their own servers. That being true for some people, the reality was not so straight-forward.
 
 On their [initial communication](https://matrix.org/blog/2019/04/11/we-have-discovered-and-addressed-a-security-breach-updated-2019-04-12), they say:
 
@@ -601,7 +601,7 @@ In terms of personal identifiers like emails and phone numbers, you can read:
 >
 > Identity server data does not appear to have been compromised
 
-While technically correct, Identity data as most commonly understood is also present in the Homeserver database which **was** accessed by the attacker. They eventually posted a screenshot of various commands ran on a DB extracts: how much the attacker actually accessed is unclear given the Matrix.org communication.
+While technically correct, Identity data as most commonly understood is also present in the Homeserver database which **was** accessed by the attacker. They eventually [posted the output of various commands ran on a DB extracts](https://web.archive.org/web/20190412072115/http://matrix.org/): how much the attacker actually accessed is unclear given the Matrix.org communication.
 
 Finally, on the 12th of April, the attacker used collected credentials (before being locked out) to take control of Cloudflare and pointing matrix.org to another website. The communication is not clear if the defacement affected the `/_matrix` API endpoints and its data coming from others servers.
 
