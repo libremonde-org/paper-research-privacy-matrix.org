@@ -418,7 +418,7 @@ Throughout this document, we refer to concepts such as *HTTP headers*, *Browser 
 Some of those headers can be redacted/removed in the HTTP libraries used in software, but cannot in web-apps.
 Given the complex and technical nature of HTTP headers and the ability of the various software to control them, this document will limit the scope of this section to their value.
 
-**Except for the Original header, none of these headers matter for the Matrix protocol. Some might allow to improve the user experience (e.g. Accept-Language).**
+**Except for the Origin header, none of these headers matter for the Matrix protocol. Some might allow to improve the user experience (e.g. Accept-Language).**
 
 ##### Origin
 
