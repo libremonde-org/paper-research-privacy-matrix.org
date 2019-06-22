@@ -89,23 +89,23 @@ This choice of client and server matches our knowledge and experience that it is
 
 Riot has been chosen following its wide and repeated promotion on the Matrix.org website.
 
-First, under [the predominant "Try now" button](https://web.archive.org/web20190620111226/http://matrix.org/) on Matrix.org on the top right corner. This button leads to [a dedicated landing page](https://web.archive.org/web20190620115310/http://matrix.org/try-now/) with the hereafter quoted first sentence:
+First, under [the predominant "Try now" button](https://web.archive.org/web/20190620111226/http://matrix.org/) on Matrix.org on the top right corner. This button leads to [a dedicated landing page](https://web.archive.org/web/20190620115310/http://matrix.org/try-now/) with the hereafter quoted first sentence:
 
 > The easiest way to try Matrix is to use the [Riot Web](https://about.riot.im/) client in your browser
 
 The page contains, at the bottom, a less noticeable sentence and link:
 
-> Alternatively, you can find more clients and servers in [Discover](https://web.archive.org/web20190620115310/http://matrix.org/try-now/).
+> Alternatively, you can find more clients and servers in [Discover](https://web.archive.org/web/20190620121328/https://matrix.org/docs/projects/try-matrix-now/).
 
-Second, The [Discover page](https://web.archive.org/web20190620121329/http://matrix.org/docs/projects/try-matrix-now/) is made of a filterable list of all known implementations which would allow a user to know about all available clients. The page itself list *Riot* and *Riot for Android and iOS* as first and second options in a manner which is clearly and directly noticeable. The first sentence of the page reads:
+Second, The [Discover page](https://web.archive.org/web/20190620121328/https://matrix.org/docs/projects/try-matrix-now/) is made of a filterable list of all known implementations which would allow a user to know about all available clients. The page itself list *Riot* and *Riot for Android and iOS* as first and second options in a manner which is clearly and directly noticeable. The first sentence of the page reads:
 
-> To get started using Matrix, pick a client and join [#matrix:matrix.org](https://web.archive.org/web/20190620122127/https://matrix.to/). You can also check the [Matrix Clients Matrix](https://web.archive.org/web20190620122151/http://matrix.org/docs/projects/clients-matrix/) to see more detail.
+> To get started using Matrix, pick a client and join [#matrix:matrix.org](https://web.archive.org/web/20190620122127/https://matrix.to/). You can also check the [Matrix Clients Matrix](https://web.archive.org/web/20190620122151/http://matrix.org/docs/projects/clients-matrix/) to see more detail.
 
-Finally, The [Matrix Clients Matrix](https://web.archive.org/web20190620122151/http://matrix.org/docs/projects/clients-matrix/) page also list *Riot Web*, *Riot Android*, *Riot iOS* in first positions in their "compare" tables.
+Finally, The [Matrix Clients Matrix](https://web.archive.org/web/20190620122151/http://matrix.org/docs/projects/clients-matrix/) page also list *Riot Web*, *Riot Android*, *Riot iOS* in first positions in their "compare" tables.
 
 #### Server choice
 
-Synapse has been chosen because it is the first server implementation listed on the [Discover page](), and is the only server feature-complete enough to be used on a day-to-day basis.
+Synapse has been chosen because it is the first server implementation listed on the [Discover page](https://web.archive.org/web/20190620121328/https://matrix.org/docs/projects/try-matrix-now/), and is the only server feature-complete enough to be used on a day-to-day basis.
 
 
 
