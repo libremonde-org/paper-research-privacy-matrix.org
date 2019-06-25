@@ -29,6 +29,7 @@ Data sent on a potential regular basis based on a common web/desktop+smartphone 
 
 With default settings, they allow unrestricted, non-obfuscated public access to the following potentially personal data/info:
 
+- Matrix IDs mapped to Email addresses/phone numbers added to a user's settings.
 - Every file, image, video, audio that is uploaded to the Homeserver.
 - Profile name and avatar of users.
 
