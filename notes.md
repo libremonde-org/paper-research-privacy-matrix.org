@@ -71,7 +71,7 @@ To do so, we will follow the most common setup and [the ones recommended by Matr
 
 Matrix.org only gives self-hosting recommendations for client, Home and Identity server, a full Matrix stack also include  several other items. We will also cover those unspoken items in this review.
 
-**We believe that privacy and security is only as good as default settings, software and recommendations given to users. This review will therefore be based on the spirit that *Default Settings Matter*, a view shared by core Web actors like [Mozilla](https://blog.mozilla.org/blog/2019/06/04/when-it-comes-to-privacy-default-settings-matter/)**.
+**We believe that privacy and security is only as good as default settings, software and recommendations given to users. This review will therefore be based on the spirit of [Ethical Web Principles](https://w3ctag.github.io/ethical-web-principles/) and that *Default Settings Matter*, a view shared by core Web actors like [Mozilla](https://blog.mozilla.org/blog/2019/06/04/when-it-comes-to-privacy-default-settings-matter/)**.
 
 **This review is based on the principle that no consent is given to any 3rd party service/Privacy policy/Terms of Services of any kind unless specifically prompted, following the expectations of users that their data and metadata is self-hosted and under their control. This is in line with EU GDPR laws.**
 
