@@ -409,7 +409,7 @@ After discovering how intrusive was a recommended self-hosted stack and configur
 > (meta)data? We hope such questions will be answered to ensure users' 
 > privacy is handled appropriately.
 
-Remember that [It's Good to Be King](): you actually do not have to use what's in the Privacy Notice. A request is valid if it is submitted by any means. It also cannot be used as a way of extending the one month time limit for responding ([ICO - Right of Access](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/right-of-access/#4)). This also was a reasonable place to make such request: it was a review document that directly impacted Matrix.org and so they were bound to read it. The PDF feedback shows that the document was indeed fully read and reviewed, including those questions which were directly commented on.
+Remember that [It's Good to Be King](#its-good-to-be-king): you actually do not have to use what's in the Privacy Notice. A request is valid if it is submitted by any means. It also cannot be used as a way of extending the one month time limit for responding ([ICO - Right of Access](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/right-of-access/#4)). This also was a reasonable place to make such request: it was a review document that directly impacted Matrix.org and so they were bound to read it. The PDF feedback shows that the document was indeed fully read and reviewed, including those questions which were directly commented on.
 
 The monthly period starts on the next calendar day of the request: 14th of June 2019.
 
