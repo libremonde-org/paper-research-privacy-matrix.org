@@ -610,6 +610,8 @@ We are currently considering talking about the following in the final version of
 
 **CONTEXT**: This is a preliminary analysis of data. Screenshots, precise numbers, commands run to obtain them and proof of the data breach can be found in [Annex E](#Annexes).
 
+**THIS BREACH CONTAINS DATA FROM OTHERS SERVERS THAN `matrix.org`, AND FOR EVENTS THAT WE ARE NOT ALLOWED TO SEE VIA REGULAR ACCESS CONTROL. THIS IS A GLOBAL FEDERATION LEAK!**
+
 We have chosen to disclose this breach under [Full Disclosure](https://en.wikipedia.org/wiki/Full_disclosure_(computer_security)#Full_disclosure) for the following reasons:
 
 1. Our personal and organisational policy is to always consider Full Disclosure first.
