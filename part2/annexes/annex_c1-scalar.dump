@@ -1,0 +1,28 @@
+# Scalar data referencing [Individual's MXID]
+Provided by New Vector Ltd.
+
+## Account Data:
+
+- user_id: [Individual's MXID]
+- created: 1503563725180
+
+## Bots created by the data subject:
+
+- @_neb_github_=40[localpart]=3a[domain]:matrix.org
+- @_neb_rssbot_=40[localpart]=3a[domain]:matrix.org
+
+## Services:
+
+### GitHub Webhooks:
+
+ github/%40[localpart]%3A[domain]/%21[localpart]%3A[domain] | ![localpart]:[domain]
+ github/%40[localpart]%3A[domain]/%21[localpart]%3A[domain] | ![localpart]:[domain]
+ github/%40[localpart]%3A[domain]/%21[localpart]%3A[domain] | ![localpart]:[domain]
+ github/%40[localpart]%3A[domain]/%21[localpart]%3A[domain] | ![localpart]:[domain]
+ github/%40[localpart]%3A[domain]/%21[localpart]%3A[domain] | ![localpart]:[domain]
+ github/%40[localpart]%3A[domain]/%21[localpart]%3A[domain] | ![localpart]:[domain]
+ github/%40[localpart]%3A[domain]/%21[localpart]%3A[domain] | ![localpart]:[domain]
+
+### RSS Bots:
+
+ rssbot/%40[localpart]%3A[domain]/%21[localpart]%3A[domain] | ![localpart]:[domain]

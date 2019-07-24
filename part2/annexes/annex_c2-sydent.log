@@ -1,0 +1,5 @@
+19/Jul/2019:13:18:55 GET /_matrix/identity/api/v1/lookup?medium=address&email=[REDACTED]
+19/Jul/2019:13:19:01 GET /_matrix/identity/api/v1/lookup?medium=address&address=[REDACTED]
+19/Jul/2019:13:28:22 GET /_matrix/identity/api/v1/lookup?medium=address&address=[REDACTED]
+28/Apr/2019:13:18:52 GET /_matrix/identity/api/v1/lookup?medium=email&address=[REDACTED]
+28/Apr/2019:13:19:00 GET /_matrix/identity/api/v1/lookup?medium=email&address=[REDACTED]
