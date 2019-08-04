@@ -1,0 +1,15 @@
+{
+  "type": "m.room.message",
+  "sender": "@abuse:matrix.org",
+  "content": {
+    "body": "This room has been removed from the matrix.org homeserver due to violating the terms of use.",
+    "msgtype": "m.text"
+  },
+  "origin_server_ts": 1565013147204,
+  "unsigned": {
+    "age": 846
+  },
+  "event_id": "$kI2dcVw0rNCx5gacxu-NentI50wTqvuHQDNSLHtV2pU",
+  "room_id": "!aVQFvooxkHauSIPHIk:matrix.org"
+}
+

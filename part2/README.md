@@ -3,7 +3,7 @@
 ---
 
 **License:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). - See [Editorial Notes](#editorial-notes) for Attribution details.   
-**Document version:** v0.1  
+**Document version:** v0.2  
 **Published on:** [Gitlab](https://gitlab.com/libremonde-org/papers/research/privacy-matrix.org/tree/master/part2), [GitHub](https://github.com/organizations/libremonde-org/paper-research-privacy-matrix.org/blob/master/part2)
 
 ---
@@ -55,20 +55,19 @@ On the next day, Matrix.org gave us a [full review of the notes](https://web.arc
 - "*Much of the rest is incorrect or hyperbolic however*" ([context](https://web.archive.org/web/20190714170716/https://gist.github.com/maxidorius/5736fd09c9194b7a6dc03b6b8d7220d0#gistcomment-2943323))
 - "*most of the rest of it is alarmist and disproportionate FUD*" ([context](https://news.ycombinator.com/item?id=20179982))
 - "*there is a bunch of stuff which is simply incorrect, which is frustrating*" ([context](https://news.ycombinator.com/item?id=20186400))
-- "*if you are selfhosting and you want to avoid using 3rd party servers, don’t use them!*" ([context](https://news.ycombinator.com/item?id=20182376))
 
-The document was never intended to initiate a debate or a discussion with Matrix.org, and was only aimed as research notes for [The Grid](https://gitlab.com/thegridprotocol/home), which we believed were worth sharing. Nonetheless, we provided [one last set of replies](https://gist.github.com/maxidorius/5736fd09c9194b7a6dc03b6b8d7220d0#gistcomment-2945336) to Matrix.org, clarified a few items and amended one sentence that was potentially incorrect. See the [Gist revisions](https://gist.github.com/maxidorius/5736fd09c9194b7a6dc03b6b8d7220d0/revisions) for a full change history of the notes.
+We provided [one last set of replies](https://gist.github.com/maxidorius/5736fd09c9194b7a6dc03b6b8d7220d0#gistcomment-2945336) to Matrix.org, clarified a few items and amended one sentence that was potentially incorrect. See the [Gist revisions](https://gist.github.com/maxidorius/5736fd09c9194b7a6dc03b6b8d7220d0/revisions) for a full change history of the notes.
 
 To this day, Matrix.org has not challenged the document technically, or factually. We believe it is accurate in its current form and not "*incorrect*", "*hyperbolic*", *alarmist*", or "*disproportionate FUD*". We have received a lot of positive feedback and encouragements to continue our work, and we have seen actual perception changes of Riot that make us believe our work has indeed been useful one way or another:
 
 - [PRISM Break](https://prism-break.org/en/) has [removed Riot from their recommendations](https://gitlab.com/prism-break/prism-break/commit/e4702307d0b8bf67e34d3c774792aae604553272).
-- [Privacytools.io](https://www.privacytools.io/) has [added a "privacy concerns" badge](https://github.com/privacytoolsIO/privacytools.io/pull/1024) on [their listing page](https://www.privacytools.io/software/im/#im).
+- [Privacytools.io](https://www.privacytools.io/) has [removed Riot from their recommendations](https://github.com/privacytoolsIO/privacytools.io/pull/1047).
 
-When we wrote the first research document, we didn't think we would ever feel the need to write a second one. We held some hope that Matrix.org would finally take the privacy matters seriously, after [quickly dismissing them](https://github.com/prism-break/prism-break/issues/1936#issuecomment-384700587) on [various](https://github.com/matrix-org/synapse/issues/4540) occasions [in the past](https://docs.google.com/document/d/135g2muVxmuml0iUnLoTZxk8M2ZSt3kJzg81chGh51yg/edit#heading=h.ed3lumlafc26). The first document aimed to shed light on the software created by Matrix.org, its promotion and how it had a direct impact on the privacy of users. It was a technical document at its core, focused on a specific software stack. This research document will take on a different approach.
+When we wrote the first research document, we didn't think we would ever feel the need to write a second one. We held some hope that Matrix.org would finally take Privacy seriously, after [quickly dismissing raised concerns](https://github.com/prism-break/prism-break/issues/1936#issuecomment-384700587) on [various](https://github.com/matrix-org/synapse/issues/4540) occasions [in the past](https://docs.google.com/document/d/135g2muVxmuml0iUnLoTZxk8M2ZSt3kJzg81chGh51yg/edit#heading=h.ed3lumlafc26). The first document aimed to shed light on the software created by Matrix.org, its promotion and how it had a direct impact on the privacy of users. It was a technical document at its core, focused on a specific software stack. This research document will take on a different approach.
 
 ## Purpose and Scope
 
-**This document is a research paper for [The Grid Protocol](https://gitlab.com/thegridprotocol/home#the-grid) project, a fork of the Matrix protocol. Privacy is a founding value of the project. This is an effort to document privacy points from our parent project, which will be used to create guidelines and recommendations on building the protocol. It will be used for our own governing body/landing website and to evaluate Grid implementations in their handling of users' privacy. It will be used to help create the right tools, processes and documentation to help Users, Developers, and System administrators alike in a post-GDPR world**.
+This document is a research paper for [The Grid Protocol](https://gitlab.com/thegridprotocol/home#the-grid) project, a fork of the Matrix protocol. Privacy is a founding value of the project. This is an effort to document privacy points from our parent project, which will be used to create guidelines and recommendations on building the protocol. It will be used for our own governing body/landing website and to evaluate Grid implementations in their handling of users' privacy. It will be used to help create the right tools, processes and documentation to help Users, Developers, and System administrators alike in a post-GDPR world.
 
 ---
 
@@ -101,7 +100,7 @@ To do so, we will mainly use the guides of the English Supervisor Authority, [IC
 
 We believe it to be a very educational guide as it shows what entities have to do when it comes to GDPR, and by extension how individuals' rights fit in that. It is also directly tailored to English organisations and incorporate other English laws into a single, unified guide. For ease of use, links pointing to this guide will start with `ICO -`.
 
-**We wrote this document so that it does not rely on you following those links directly, while giving you a chance to open them in background tabs and come back to them later, ideally after you have read a section entirely. They usually add valuable context to help you understand the subtleties/exceptions that could apply. Such details might be lost in our effort to keep this document as accessible as possible.**
+We wrote this document so that it does not rely on you following those links directly, while giving you a chance to open them in background tabs and come back to them later, ideally after you have read a section entirely. They usually add valuable context to help you understand the subtleties/exceptions that could apply. Such details might be lost in our effort to keep this document as accessible as possible.
 
 **DISCLAIMER REMINDER:** We are not lawyers. This document is not legal advice. In doubt, always seek legal advice.
 
@@ -211,7 +210,7 @@ If it is possible to identify or single out an individual using several of those
 
 This is also true for patterns related to behaviour, like whenever you are connecting to your Homeserver, or whenever Riot connects to the Integration server, or for pretty much anything that can be passively collected from the server side just because an individual is using services. This is called [Device fingerprinting](https://en.wikipedia.org/wiki/Device_fingerprint).
 
-**It is important to clarify that Device fingerprinting does not have to be done, to be a privacy problem: while Matrix.org could very well not do any kind of profiling on users (they claim not to in their privacy notice), the kind of data collected to do it is the same as the kind an Organisation would typically store in their server logs as part of normal activity. The data would be there, just not used for that purpose.**
+It is important to clarify that Device fingerprinting does not have to be done, to be a privacy problem: while Matrix.org could very well not do any kind of profiling on users (they claim not to in their privacy notice), the kind of data collected to do it is the same as the kind an Organisation would typically store in their server logs as part of normal activity. The data would be there, just not used for that purpose.
 
 ### It's Good to Be King
 
@@ -333,7 +332,7 @@ Finally, Legitimate Interests means the entity using it has more upfront researc
 
 The final important point of GDPR is that any documentation, internal processes, lawful basis, data processing or any other item relating to personal data must be kept up to date, reviewed regularly and adapted if new circumstances arise. This is directly tied to Fairness and Transparency.
 
-Per example, following the publication of our first research document, we would expect the legal entities behind Matrix.org to at least review without any delay their GDPR choices, documentation, risk assessment, and if their lawful basis is still valid. **In case of Personal Data breach, which covers the very broad definition of "processing", we would expect individuals to be informed accordingly: not just that the privacy notice has changed, but why, and in a clear accountable way.**
+Per example, following the publication of our first research document, we would expect the legal entities behind Matrix.org to at least review without any delay their GDPR choices, documentation, risk assessment, and if their lawful basis is still valid. In case of Personal Data breach, which covers the very broad definition of "processing", we would expect individuals to be informed accordingly: not just that the privacy notice has changed, but why, and in a clear accountable way.
 
 **Overall, GDPR is very human and centred on the individual: the spirit of the law matters, and entities who process personal data can no longer primarily consider their own benefits, goals or gains alone. They have to think from the individual point of view, desires, expectations and the effects/consequences that the processing will have.**
 
@@ -367,7 +366,7 @@ We have reviewed this privacy notice, but it also does not give a lawful basis f
 
 ### Statistics computation and Profiling
 
-**We are worried that there might be misleading language from Matrix.org about profiling of entities, and would like to lay out what we have noticed that *may* tie to profiling and manual processing of collected data. Matrix.org claims to not do any kind of profiling in their privacy notice, but it is possible they could be using the data of individuals in a way they would think of it as profiling. We let the reader come to their own opinion on the matter.**
+We are worried that there might be misleading language from Matrix.org about profiling of entities, and would like to lay out what we have noticed that *may* tie to profiling and manual processing of collected data. Matrix.org claims to not do any kind of profiling in their privacy notice, but it is possible they could be using the data of individuals in a way they would think of it as profiling. We let the reader come to their own opinion on the matter.
 
 ---
 
@@ -401,12 +400,8 @@ A full timeline and transcript is available in [Annex A](#Annexes) for the excha
 
 After discovering how intrusive was a recommended self-hosted stack and configuration from Matrix.org, we decided to include a GDPR Information request in the research itself in the [Closing words](https://gist.github.com/maxidorius/5736fd09c9194b7a6dc03b6b8d7220d0#closing-words) with an explicit mention to receive answers:
 
-> While users on the matrix.org Homeserver have to explicitly agree to the
-> Terms of Use and the privacy notice, no agreement is ever sought from 
-> users on self-hosted servers that also use `matrix.org` and `vector.im`.
-> How is their data handled? Are they processed in some way? Which method
-> of lawful processing under GDPR allows for this constant sharing of 
-> (meta)data? We hope such questions will be answered to ensure users' 
+> While users on the matrix.org Homeserver have to explicitly agree to the Terms of Use and the privacy notice, no agreement is ever sought from users on self-hosted servers that also use `matrix.org` and `vector.im`.
+> How is their data handled? Are they processed in some way? Which method of lawful processing under GDPR allows for this constant sharing of (meta)data? We hope such questions will be answered to ensure users' 
 > privacy is handled appropriately.
 
 Remember that [It's Good to Be King](#its-good-to-be-king): you actually do not have to use what's in the Privacy Notice. A request is valid if it is submitted by any means. It also cannot be used as a way of extending the one month time limit for responding ([ICO - Right of Access](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/right-of-access/#4)). This also was a reasonable place to make such request: it was a review document that directly impacted Matrix.org and so they were bound to read it. The PDF feedback shows that the document was indeed fully read and reviewed, including those questions which were directly commented on.
@@ -456,16 +451,16 @@ About an hour after and while our GDPR Data access request was being handled, Ma
 >
 > **However, it is not acceptable to amend or delete the data if you would not otherwise have done so. Under the Data Protection Act 2018  (DPA 2018), it is an offence to make any amendment with the intention of preventing its disclosure.**
 
-**At this time, it is our believe that the legal entities behind Matrix.org:**
+At this time, it is our believe that the legal entities behind Matrix.org:
 
-- **have committed an offence under DPA 2018**
-- **have failed to provide a lawful basis for their Identity data processing**
-- **have failed to be Fair and Transparent**
-- **have failed to respond to the GDPR request without undue delay.**
+- have committed an offence under DPA 2018
+- have failed to provide a lawful basis for their Identity data processing
+- have failed to be Fair and Transparent
+- have failed to respond to the GDPR request without undue delay.
 
 When we came aware of the blog post, we immediately informed the GDPR Operator that we expected to still receive the data now deleted from the live server, and the access log to our personal identifiers on the Identity API. The GDPR Operator ignored our statement, and provided us with a URL, a login and a password to a ZIP file.
 
-The GDPR Operator then informed us that the ZIP file contained all our rooms events, but did NOT contain our group memberships, which they provided in plain text in the chat, **failing to provide the data in a machine readable format, and simply failing to add it to the ZIP that was just transmitted**.
+The GDPR Operator then informed us that the ZIP file contained all our rooms events, but did NOT contain our group memberships, which they provided in plain text in the chat, failing to provide the data in a machine readable format, and simply failing to add it to the ZIP that was just transmitted.
 
 Once we downloaded the ZIP, we informed the GDPR Operator that the extract was not complete. We repeated several times that it was their obligation to ensure all the data we requested, and knew Matrix.org had, was provided and that such data should have been given to us in a more pro-active manner already.
 
@@ -608,67 +603,67 @@ We are currently considering talking about the following in the final version of
 
 ## Personal Data Breach Disclosure
 
-**CONTEXT**: This is a preliminary analysis of data. Screenshots, precise numbers, commands run to obtain them and proof of the data breach can be found in [Annex E](#Annexes).
-
-**THIS BREACH CONTAINS DATA FROM OTHERS SERVERS THAN `matrix.org`, AND FOR EVENTS THAT WE ARE NOT ALLOWED TO SEE VIA REGULAR ACCESS CONTROL. THIS IS A GLOBAL FEDERATION LEAK!**
+**THIS BREACH CONTAINS DATA FROM OTHER SERVERS THAN `matrix.org`, AND FOR EVENTS THAT WE ARE NOT ALLOWED TO SEE VIA REGULAR ACCESS CONTROL. THIS IS A GLOBAL FEDERATION LEAK!**
 
 We have chosen to disclose this breach under [Full Disclosure](https://en.wikipedia.org/wiki/Full_disclosure_(computer_security)#Full_disclosure) for the following reasons:
 
 1. Our personal and organisational policy is to always consider Full Disclosure first.
-
-2. Given all the elements found in this research document and all previous publications, we believe Matrix.org will actively attempt to cover up this breach and/or downplay its size/impact, like it has in the past as illustrated in these research notes.
-
+2. Given all the elements found in this research document and all previous publications, Matrix.org is actively attempting to cover up this breach and/or downplay its size/impact, like it has in the past as illustrated in these research notes.
 3. Matrix.org [requests](https://web.archive.org/web20190606085017/http://matrix.org/security-disclosure-policy/) the usage of [Coordinated Disclosure](https://en.wikipedia.org/wiki/Full_disclosure_(computer_security)#Coordinated_disclosure) under the loaded term "*[Responsible Disclosure](https://en.wikipedia.org/wiki/Responsible_disclosure)*", alluding that people who do not use it are irresponsible, which would not be Fair. The individual who initially coined the loaded term has [asked for it to no longer be used](https://www.theregister.co.uk/2010/07/22/microsoft_coordinated_disclosure/), which Matrix.org does not honour, making us question Matrix.org Transparency and goals for its use.
 
----
+### Overview
 
-On the 19th of July 2019, New Vector Ltd in their capacity of Data Controller for Matrix.org shared Matrix room events in federation format, as part of their obligations in answering a GDPR Data access request.
+In [Annex E](#annexes), you will find all related commands/queries used to compute the various numbers/data sets used in this section on a purely factual basis, without real analysis. The main document will focus on explaining the context in which the leak happened, the various numbers we computed, how we came to the conclusion that this is a leak and analyse the leak itself.
 
-The events were sizing `1.9 GB` compressed and `8.7 GB` decompressed. Given the uncompressed size, we expected something to be wrong: the size was simply way too large to only be the events of an individual, or to only have one copy each, or both.
+While New Vector CEO's has recognised only events directly related to the individual are required by law, we have considered three different impact scenarios:
 
-The format of all files were one line per event, allowing us to get a first amount of total number of events. We counted `7 660 193` events which was totally unexpected, even taking into account that some files dedicated to state events would contain duplicates.
+- **Soft Leak:** Events not directly related to the individual have been included.
+- **Medium Leak:** Events not sent to the individual's Service Provider have been included.
+- **Hard Leak:** Events not accessible at all by the individual, because of Matrix access controls, have been included.
 
-Our very first ballpark figure showed that the individual should have expected about `76 588` events.
+This is a summary table of our high-level findings in terms of numbers:
 
-To put this into perspective, here are the same numbers for two types of servers:
+|                    | Soft Leak | Medium Leak | Hard Leak |
+|--------------------|-----------|-------------|-----------|
+| **Events**         | 3395441   | 1495974     | 9055      |
+| **Rooms**          | 461       | 452         | 5         |
+| **Users**          | 92253     | 34945       | 5873      |
+| **Display names**  | 3126      | 2931        | 11        |
+| **Media: Avatars** | 30224     | 12736       | 1472      |
+| **Media: Files**   | 30556     | 14705       | 4         |
+| **New media**      | 48334     | 23914       | 450       |
 
-- A corporate server, labelled "*Corp*", that:
-  - Only has a handful of individuals using it on a daily basis
-  - Is for users who have advanced technical knowledge about IT and Matrix
-  - Is joined to all big rooms of the federation (Matrix HQ, Riot, etc.)
-- A Friends & Family server, labelled "*F&F*", that:
-  - Has about 20 individuals using it on a daily or weekly basis
-  - Is for users without any significant IT knowledge that use it as an alternative to Facebook Messenger, WhatsApp, etc.
-  - Is not joined to the open federation, and only connects with two other servers of similar size and purpose.
+**While we are still analysing the media files,  we found so far various data which are security and personal data breaches:**
 
-Over the last 30 months, we see the following numbers:
+- **Logs of application with Credentials/API keys for network services.**
+- **Identifiers (Usernames, Emails, etc.) used to access web services.**
+- **Mappings between Matrix IDs and Emails.**
+- **Pictures of adults, some pretty revealing and likely not meant to be public.**
+- **Pictures of children.**
+- **Some pictures give away geographical information.**
+- **Audio and video recordings of individuals.**
+- **Screenshot of dating app's profiles, with pictures of individuals.**
+- **Licenses plates of cars from pictures.**
 
-|  | People | Event Count | % of Extract | Event Size (bytes) | % of Extract |
-|---|-----------|----------|-------|--------|--------|
-|**Corp**| `2` | `5 102 055` | `66.604 %` | `11811160064` | `135.95 %` |
-| **F&F** | `17` | `158 767` | `2.07 %` | `191889408` | `2.21 %` |
+### Context and timeline
 
-This means the extract, over the 30 months period:
+On the 19th of July 2019, New Vector Ltd in their capacity of Data Controller for Matrix.org shared Matrix room events in federation format, as part of their obligations in answering a GDPR Data access request. We will refer to this data as "*GDPR extract*" or "*the extract*". 
 
-- **Is as big as a Corp server sending and receiving events from all major rooms like Matrix HQ**, averaging size and count together.
-- **Is 50 times bigger than 17 non-technical users talking in a small closed federation without any big room**, averaging size and count together.
-- **Has 10 times more events than what the individual would expect at first**.
+The extract's size was 1.9 GB compressed and 8.7 GB decompressed. Given the uncompressed size, we expected something to be wrong: the size was simply way too large to only be the events of an individual, or to only have one copy each.
 
-This should have directly seemed out of place to a GDPR operator who is used to deal with this kind of thing. That it did not **is the first sign that the oversized extract file is usual, and that all other GDPR Data extracts might be affected.**
+The format of all files was one line per event, allowing us to get a first amount of total number of events. We counted ~ 7.7M events which was totally unexpected, even taking into account that files dedicated to state events would contain duplicates. Checking on our side, the database showed that the individual should have expected only about ~78k events.
 
-We are only at the very preliminary stage of analysing the data and understand what was leaked exactly. The raw size of the data represents more than 2 years' worth of events happening across `468` rooms which we need to analyse to know:
+To put this into perspective, we compared those numbers to the total number of events from two servers that ran for a similar period of time: the server where the individual's account is hosted, and one managed by ourselves used in a closed ecosystem (See "Sanity checks" of Annex E).
 
-- If New Vector Ltd provided us with at least all the individual room events data, being the primary purpose of the data request.
-- Identify all the people whom personal data has been leaked, but were already received or are accessible by the individual's Homeserver on their behalf.
-- Identify all the people whom personal data has been leaked and was never shared with the individual's Homeserver, and is not accessible even if the user attempted to access them with the Matrix protocol. **This is our highest priority.**
+Over a 30 months period, we saw that the extract:
 
-**We have already identified sevens rooms where personal data has been leaked that the individual should not have access to. We will reach out to the impacted individuals and communicate the details of the leak.**
+- **Is as big as a Corporation server sending and receiving events from all major rooms like Matrix HQ**.
+- **Is 50 times bigger than ~20 non-technical users talking in a small closed federation without any big room**.
+- **Has 100 times more events than what the individual would expect at first**.
 
-**Those rooms are from the Official Matrix.org rooms (Matrix HQ, Synapse, etc.) from which the individual was banned. While claiming generic Code of Conducts violations, we believe the real motivation was to silence the individual who has been sharing their concerns for privacy and Matrix.org privacy processes for the past years. We find the irony extremely sad, yet very fitting of Matrix.org practices.**
+This should have directly seemed out of place to a GDPR operator who is used to dealing with requests. That it did not is the first sign that the oversized extract file is actually expected, and that all other GDPR Data extracts might be affected.
 
----
-
-With a timing that could not be better, Matrix.org [released synapse v1.2.0rc1](https://web.archive.org/web/20190723164811/https://github.com/matrix-org/synapse/releases) during the initial writing of this research document. One line in the release notes stood out:
+Matrix.org [released synapse v1.2.0rc1](https://web.archive.org/web/20190723164811/https://github.com/matrix-org/synapse/releases) during the initial writing of this research document. One line in the release notes stood out:
 
 > Add ability to pull all locally stored events out of synapse that a particular user can see. ([#5589](https://web.archive.org/web/20190723164911/https://github.com/matrix-org/synapse/pull/5589))
 
@@ -680,48 +675,304 @@ Here is also [the direct GitHub link](https://github.com/matrix-org/synapse/pull
 
 The PR was created on the 2nd of July 2019 with the first commit on the 1st of July 2019; about two weeks after our first research publication, and two weeks before our GDPR Data request was handled by the GDPR Operator. On the description, we can read the following:
 
-> Note: This only fetches events that a user can see, rather than all data we store for a user.
-> (This is a port of a hacky script we manually run to do this currently)
+> Note: This only fetches events that a user can see, rather than all data we store for a user. (This is a port of a hacky script we manually run to do this currently)
 
-This confirms the following crucial facts:
+This confirmed the following facts:
 
-- New Vector Ltd own evaluation of their tools to comply with GDPR requests was that they were "*hacky*", **that is not fit for purpose in the spirit of GDPR.**
+- New Vector Ltd own evaluation of their tools to comply with GDPR requests was that they were "*hacky*", that is not fit for purpose in the spirit of GDPR.
 - New Vector Ltd had to somehow change their internal GDPR procedures, most likely resulting from GDPR requests made by individuals after reading our first research document.
-- This data leak is either based on their "*hacky script*", or on this new tool. Either way, it is extremely likely that this is a recurring occurrence, and depending on the tool for this request:
-  - If the script was used: all data requests from an unspecified date until now have been compromised.
-  - If the synapse feature was used: all data requests since the use of it, most likely at merge time, have been compromised.
+- This data leak is either based on their "*hacky script*", or on this new tool. Matrix.org [claims this new tool was used, and that it is the first time it is used](https://web.archive.org/web/20190726032203/https://matrix.org/blog/2019/07/24/data-portability-tooling-bug/) which we have no way of validating. There is the possibility that data leak is a recurring occurrence either way.
 
-**At the time of publication of this document, we have reached out to the English Authority, [ICO](https://ico.org.uk/), with whom we will share this research and will work with to ensure we handle this data leak with care and not further damage the rights of the individuals impacted.**
+Another interesting point of the comment is that the approach was changed from "*all data we store for a user*" to "*events that a user can see*". While the rationale for the change is not explained, it might be motivated by some interpretation of the first research document.
 
-**We will also reached out to all the individuals impacted, that we are aware of so far, using their Matrix User ID to inform them personally of this leak. We will continue doing so as we come across other users in this analysis process.**
+On the 24th of July, Matrix.org [published a blog post](https://web.archive.org/web/20190724201104/https://matrix.org/blog/2019/07/24/data-portability-tooling-bug/) about this personal data leak. At the time of publication, Matrix.org claimed that:
+
+- About 3.5M events were included in the extract, which we confirmed.
+- 19 events from 4 users across 2 rooms were mistakenly included, which did not match our preliminary analysis.
+- The impact of this leak is "*extremely limited*", without giving details on its meaning or criteria used to assess it, which also did not match our preliminary analysis.
+
+Given the huge mismatch between the numbers we had and what Matrix.org claimed without linking to this research, we decided to inspect the extract in more details to find out what was going on. We contacted several individuals we knew personally, informing them of the real numbers we were seeing.
+
+As soon as we had some kind of numbers in terms of medium/hard leak, we decided to contact organisations that were involved so they could act if needed. The first organisation was the IRC Network Freenode. We informed them about the leak on Aug 4th 2019 with our current numbers (~20k hard leaked events in 26 rooms) and had a talk on the next day. We learned that Matrix.org did not inform them about the leak in the first place. They shared our concerns about the whole situation, and reached out to Matrix.org to also get their side of the story.
+
+On Aug 6th 2019, after being contacted by Freenode, Matrix.org [updated their blog post](https://web.archive.org/web20190806124754/http://matrix.org/blog/2019/07/24/data-portability-tooling-bug) with:
+
+- They missed events in their original impact analysis.
+- There were about 60 more events involving an extra 60 users, still only in two rooms.
+- Personal data in some of those events (Display names, avatars) may not have been public.
+- Recognised that another 20k events, matching the number given to Freenode, should not have been included.
+- Because those events are in publicly accessible rooms, they are not considered a breach of data.
+
+On Aug 7th 2019, New Vector's CEO expanded on their GDPR procedures by posting several comments on [Privacytools.io](https://www.privacytools.io/)'s [PR for the delisting of Riot](https://web.archive.org/web/20190807195939/https://github.com/privacytoolsIO/privacytools.io/pull/1047):
+
+- [Approach for GDPR Access requests](https://web.archive.org/web/20190807195939/https://github.com/privacytoolsIO/privacytools.io/pull/1047#issuecomment-518869441)
+- [Eligibility of room events](https://web.archive.org/web/20190807195939/https://github.com/privacytoolsIO/privacytools.io/pull/1047#issuecomment-519064978)
+
+We also [asked several questions](https://web.archive.org/web/20190807195939/https://github.com/privacytoolsIO/privacytools.io/pull/1047#issuecomment-518887771) in the hope to clarify some points, mainly those that justified including events that the individual was forbidden from accessing, given Matrix access controls. New Vector's CEO declined to answer by "signing off the thread".
+
+### Analysis
+
+The authors of this research document are in charge of two organisations which provide Matrix services to individuals and consultancy services to clients that provide those services also. As part of our day-to-day operations, we deal with GDPR data requests and have the same obligations as New Vector Ltd, including our obligations to research and understand what Matrix, synapse and Riot means in the scope of GDPR and the change in practices when the law came into effect in 2018. We will use our knowledge and expertise to analyse this personal data breach.
+
+For GDPR's launch, we also had to review and fully understand how the Matrix internal structures and access control was done, and what it means in terms of sharing events that could involve other users. There are cases where an event includes identifiers from several individuals:
+
+- A user inviting another
+- A user kicking another
+- A mention
+- A reply
+- Manually including any personal identifier as part of the message
+
+Matrix is very much similar to Emails when it comes to such principles. After checking with our Supervisor Authority, the same logic would indeed apply. A response to a Data request should:
+
+- Always include the messages sent by the individual.
+- Possibly include the messages where the individual is mentioned, or messages addressed to them directly.
+- Never include messages that are not related to the individual.
+
+While Emails is not always straight-forward as they contain a list of recipients and thus, the personal info of each individual involved, that is not the case in Matrix: Nearly all events are sent to Rooms, not to people. It is "rare" (relatively speaking) for an event to contain a direct reference to a personal identifier other than the sender themselves.
+
+There are some events that are "directly" sent from one user to another as part of device-to-device communications, like for E2EE, but those were not included in Matrix.org response, so we will not cover them here.
+
+#### Event eligibility
+
+Matrix.org's approach to a GDPR request is fundamentally different to how we handle our own: they choose to include all events which are visible to a remote user, instead of simply including events that contain a personal identifier of the individual.
+
+We believe that approach to be wrong for several reasons, which we will expand on in the next sections:
+
+- GDPR law only talks to data that relates to the individual given personal identifiers, not data which would be visible to them.
+- We received feedback from our own Supervisor Authority that only directly related events should be included.
+- The majority of Matrix events only include the sender personal identifier, and nobody else.
+- It ignores the fact that the individual is not one of their own users, but the user of a remote server that they have no agreement of any kind with.
+- It assumes that the individual is allowed to see the same data from their own server, which could implement custom policies/software in terms of access control.
+- It doesn't take into account that Matrix is a federated network and that GDPR requests could have been made to other servers to prevent access to some data, all while the individual's GDPR request was processed by Matrix.org.
+
+We will expand on each point in the following sub-sections.
+
+##### GDPR scope
+
+Given [ICO Guidance](https://ico.org.uk/for-organisations/guide-to-data-protection/introduction-to-data-protection/some-basic-concepts/#4), we know that even if data is public, it can still be personal data. Being public is not reason enough to exclude data as personal data, despite Matrix.org claims [on their blog entry](https://web.archive.org/web20190806124754/http://matrix.org/blog/2019/07/24/data-portability-tooling-bug).
+
+The very first question that we need to consider is: which data should be included? This question [was answered](https://web.archive.org/web/20190807195939/https://github.com/privacytoolsIO/privacytools.io/pull/1047#issuecomment-519064978) by New Vector's CEO:
+
+> we consider each user to own a copy of the messages they both send & receive in their conversations.  Therefore, if they ask to get a copy of their data off our server, we give them the full conversations they were in.
+
+New Vector's CEO [has also said](https://web.archive.org/web/20190807195939/https://github.com/privacytoolsIO/privacytools.io/pull/1047#issuecomment-519064978) that this approach of including all events is **NOT** a legal requirement but some specific processing of personal data:
+
+> Likewise [a Git repository], on Matrix: sure, we could have just sent over every event that the user had sent which we had on our server, which would be the bare legal minimum (alongside their other personal data, of course). However, from my perspective, providing someone with a bunch of meaningless one-sided conversations is less than helpful.  As mentioned earlier (and in the Matrix.org server's [privacy policy](https://github.com/vector-im/policies/blob/e18d9496a02f4da40a823adadfefc54c5dd5f3b9/docs/matrix-org/privacy_notice.md#federation)), we consider each user to own a copy of the messages they both send & receive in their conversations. Therefore, if they ask to get a copy of their data off our server, we give them the full conversations they were in.
+
+As explained previously in this research document, we also know that any processing of personal data:
+
+- Can only be done if objectively necessary for the purpose, and not necessary as part of the chosen methods.
+- Any processing of personal data requires a lawful basis.
+
+In terms of necessity, we already know thanks to New Vector itself that providing the full history is not necessary, and is a choice made by them to provide an added-value service which directly involves processing the personal data of other individuals.
+
+In terms of lawful basis, this "full history" approach is not covered in Matrix.org [privacy notice](https://web.archive.org/web/20190719133046/https://matrix.org/legal/privacy-notice/). At this time, we do not know which lawful basis is used. This processing of our personal data was also not disclosed during our GDPR request.
+
+We have also considered what it would mean if an individual was not given all the history. Except in rooms created since [synapse v1.0.0](https://github.com/matrix-org/synapse/releases/tag/v1.0.0) using version 4 as default, events contain references to previous ones. Those references include the server that generated the event, allowing an individual to make GDPR requests to those servers also if context is needed. Only 0.2 % (6692) of the events found in the extract did not allow such mechanism, making them negligible for this analysis.
+
+[ICO - Right of access](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/individual-rights/right-of-access/#15) has a dedicated section with guidance on how to deal with data that also include personal data from other individual(s). It allows the Data Controller to not include data in some cases, including if the data has personal data about other individuals. Without consent from the other individual(s), it relies on the disclosure being "reasonable" with a list of circumstances that must be take into account.
+
+##### Access control
+
+###### Native
+
+Matrix comes with an access control mechanism called "Room state": it is an algorithm that uses special type of events in the room to determine if an event is allowed, its visibility to users and the list of servers to which an event should be sent.
+
+Matrix.org [privacy notice](https://web.archive.org/web/20190719133046/https://matrix.org/legal/privacy-notice/) §2.8 is explicit about visibility of messages and files over federation:
+
+> In unencrypted and encrypted rooms, users connecting to the matrix.org homeserver (directly or over federation) will be able to see messages and files according to the access permissions configuration of the relevant room. This data is stored in the format it was received on our servers, and can be viewed by New Vector engineers (employees and contractors) under the conditions outlined below.
+
+**In the extract that was handed to use, 9055 events were given to us that bypass such access permissions in direct contradiction with the privacy notice. Despite this, Matrix.org does not consider those events "*a breach of data*".**
+
+They base their argument on the fact that "*these events were already publicly accessible*". [ICO - Some basic concepts](https://ico.org.uk/for-organisations/guide-to-data-protection/introduction-to-data-protection/some-basic-concepts/#4) already clarify this point: **personal data doesn't need to be 'private' information** - event information which is public knowledge can be personal data. This directly invalidates their unique reason of not considering this a data breach.
+
+###### Public is not really public
+
+Communication from New Vector Ltd on Matrix.org claims that the shared data is public, which is not actually the case in practice, giving a misleading sense of impact-free leak. There are several restrictions in place in the protocol and the reference server implementation synapse, used by virtually every server, which actually prevent "public" room to be public.
+
+At the federation level, there is no "peeking" for public room. Peeking is the technical term used for the ability to see room history and its events without being joined. Peeking over federation is simply not possible at the protocol level as there are no endpoint for it. It means that unless the server of the user is already part of the room, there is no way to do so. At the synapse level, there is simply not workaround code to make it happen, including for guest accounts, which is used for public viewers like Matrix Static.
+
+So while a room may be set to "public", it is actually not really public for all intents and purpose: There has at least one user joined in the room for other users on the same server to peek. This has been known since 2016 at least and is a well-established fact.
+
+Related issues:
+
+- [matrix-org/matrix-doc#913](https://github.com/matrix-org/matrix-doc/issues/913)
+- [matrix-org/synapse#1515](https://github.com/matrix-org/synapse/issues/1515)
+- [matrix-org/synapse#1559](https://github.com/matrix-org/synapse/issues/1559)
+- [matrix-org/synapse#4236](https://github.com/matrix-org/synapse/issues/4236)
+
+###### Per service
+
+One core value of Matrix is that it is a decentralised protocol, not limited to a single implementation. Anything not written in the documentation can be managed in whichever way the implementation authors or the system administrators see fit. This is especially true for the client requests: the server is free to control which (part of the) events are seen by which users, or delete events from remote users as part of GDPR requests. Each server also has its own Terms of Services and Privacy notice which may change what a user is allowed to access.
+
+It is not possible for Matrix.org to know with certainty what a specific user can see from their Homeserver. They can make an educated guess what they would see given the room resolution algorithms, or their own rules, but they would not be aware of custom rules in place put at the Client API level, or custom room state resolution implementations.
+
+This type of access control is illustrated by Matrix.org themselves in recent actions taken: they have blocked access to the 8chan image board's rooms that had Matrix.org users in them, following on [Cloudflare's actions](https://web.archive.org/web/20190806105244/https://new.blog.cloudflare.com/terminating-service-for-8chan/), being their CDN. The JSON of the event for the message from "Abuse Management" can be found in [Annex F.2](#annexes).
+
+![Service access control screenshot](annexes/annex_f1-acl-redirection_room.png)
+
+While the room state algorithm does not restrict any Matrix.org users from joining those rooms, they have blocked access to them via service restriction, citing their Terms of Service/Code of Conduct. Given the decentralised/federated nature of the network, this restriction would only apply to their users, and would be invisible to any other server. There would be no way for a DPO from another server to know about such restriction.
+
+If that other server was to use the same approach in sharing unrelated history in GDPR data request, they would effectively undermine any restrictions put in place by Matrix.org on their users. We doubt Matrix.org would be happy about such loophole. The same kind of loophole could be used to also get information that was redacted/blocked. Think of abuse content like revenge porn that directly harm people, or a child being tricked into giving their home address in a public room.
+
+##### Bridged networks
+
+A fundamental feature of Matrix is its ability to bridge other networks, allowing to access those networks directly via the Matrix protocol. Those networks have their own access control mechanisms, history retention policies and, of course, their own Terms of Services and Privacy Policy.
+
+IRC, per example, do not offer native history retention and it is not possible to get access to the full history of a channel using the protocol itself: the user needs to be present in the channel and save messages to history, or be given the history by another user. Matrix allows to bypass this native access control and all privacy expectations related to it by allowing those messages to be stored forever.
+
+While responding to a GDPR request, it is critical to take such differences into account: users in those remote networks might not even be aware that the bridge exists, just like it's not obvious from the Matrix side. Extra care must be taken when evaluating the "reasonable" criteria of sharing such (potential) personal data from individuals that might not be aware of this invisible processing.
+
+##### GDPR process abuse
+
+One important side-effect of GDPR requests in a decentralised network, given the allowed resolution time frame (~1 month), is the possibility to bypass restriction put in place on accessing some data by requesting the data from another service via a GDPR request.
+
+This is especially true if it is known that the service has a policy to include data not strictly related to the individual's. One practical example of this: a message with problematic content (illegal, etc.) is sent in a room. This message is blocked by some servers, but not by others yet. An individual interested into the message could simply make a GDPR data request to a server that includes history in their response, thus bypassing the restriction in place.
+
+##### Outcome
+
+Matrix.org does not seem to take into account the federated and bridged nature of the very protocol they created, responding to GDPR requests from remote users as if they were one of theirs, ignoring the decentralised nature of the network in terms of access controls, or the freedom of developers/system administrators to moderate content/access how they see fit.
+
+They ignore the very mechanisms they put in place for the management of their own server. This directly undermines any terms of services or privacy policy in place on other servers. It also gives the ability to individuals to potentially gain access to data without actually accepting any Terms of Service/privacy policies, making it some kind of lawless area. 
+
+By their own admission, we know that New Vector does not need to include the history of events in responses to GDPR data requests and instead only include events that strictly relate to the individuals. 
+
+#### Users
+
+During a GDPR data request, the Organisation can put users in five different categories:
+
+- Individuals from "local" Homeserver(s).
+- Individuals from other networks using a bridge from "local" Homeserver(s).
+- Individuals from "remote" Homeserver(s).
+- Individuals from other networks using a bridge from "remote" Homeserver(s).
+- That do not represent individuals (bots, etc.) but could send data about individuals.
+
+Each represent a difference case and a different approach when choosing (or not) to include their data in a GDPR request, as any remote user is affected by *invisible processing* ([ICO - Transparency principle](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/principles/lawfulness-fairness-and-transparency/#transparency)). Users from other networks are also affected by *invisible processing*. It is finally possible to be affected in a double manner by such *invisible processing*.
+
+Matrix does not provide a technical way at the protocol level to identify bots and bridges. Instead, such identification is done manually by looking at the User IDs for conventions and recognisable patterns. This analysis on manual identification and inside knowledge, which would not be known to someone without possibly extensive research into bridging, or without being aware or interested about bridging in the first place.
+
+Matrix.org has a very significant amount of bridged users from the Freenode IRC network, compared to all other bridges combined, and is impacted in a significant manner. This is the breakdown of the amount of users involved in this leak, using each approach:
+
+|                             | Soft Leak | Medium Leak | Hard Leak |
+| --------------------------- | --------- | ----------- | --------- |
+| **Total**                   | 92253     | 34945       | 5873      |
+| **From Matrix.org**         | 77659     | 29011       | 4855      |
+| **From another Homeserver** | 14593     | 5934        | 1018      |
+| **From Freenode**           | 28404     | 9812        | 2018      |
+| **From other networks**     | 2992      | 774         | 45        |
+
+Regardless of the approach, it is not just a few users, but thousands of them, including from bridged networks or other Homeservers. We do not believe it is plausible that all of those users would this sharing is reasonable, expected or understood, under any kind of lawful processing, knowing that is it not objectively necessary.
+
+##### Profiles
+
+User profiles are left publicly exposed without any authentication or authorisation. Anyone can get the current information of a user using their Matrix ID. They can also do so from any server that can federate, giving them anonymity for the target server if they wish. This privacy issue has been known since at least March 2016 and [reported by New Vector's Ltd CEO](https://web.archive.org/web/20190810034523/https://github.com/matrix-org/matrix-doc/issues/657).
+
+Getting a user profile gives at least their Display name and profile picture (avatar), if those were ever set. The profile may include other arbitrary information. Their profile is public regardless of being in rooms, or the rooms they join.
+
+We were able to fetch the profile of the users involved in the leak, which included new information that was usually more recent than what found in the leaked events.
+
+#### Data
+
+The vast majority (~76%) of data shared were event under the `m.room.message` type and `m.text` sub-types. Those events represent regular IM messages written by users. All of these are personal data for each individual sending them and can also contain references to other individuals.
+
+Other interesting sub-types are `m.file`, `m.image`, `m.audio` and `m.video`. They all contain reference to files/media that may disclose/contain personal data about individuals, like screenshots of private rooms, profile pictures, recorded voice messages, etc.
+
+There are a few other message types that can directly contain personal data:
+
+- `m.room.member` which may contain the display name and avatar URL of users.
+- `m.call` namespace has events that contain IP addresses used to initiate VoIP calls.
+
+##### Files
+
+Related main issues covering the various points (see other issues referenced on their page too):
+
+- [matrix.org/synapse#1256](https://web.archive.org/web/20190806114219/https://github.com/matrix-org/synapse/issues/1256) (15 Dec 2014) - Remote files are cached forever
+- [matrix.org/synapse#1263](https://web.archive.org/web/20190731114119/https://github.com/matrix-org/synapse/issues/1263) (24 Dec 2014) - Redacting an event does not redact related files
+- [matrix-org/synapse#1403](https://web.archive.org/web/20190806013908/https://github.com/matrix-org/synapse/issues/1403) (25 Oct 2015) - Media download does not have access control
+- [matrix-org/matrix-doc#701](https://web.archive.org/web/20190407123504/https://github.com/matrix-org/matrix-doc/issues/701) (20 Aug 2016) - Media download is not authenticated (spec), GDPR related
+- [matrix-org/synapse#2150](https://web.archive.org/web/20190806013653/https://github.com/matrix-org/synapse/issues/2150) (22 Apr 2017) - Media download is not restricted (server)
+- [matrix-org/synapse#4907](https://web.archive.org/web/20190806014544/https://github.com/matrix-org/synapse/issues/4907) (21 Mar 2019) - Raised concerned from an individual regarding media access
+- [vector-im/riot-web#9417](https://web.archive.org/web/20190806014541/https://github.com/vector-im/riot-web/issues/9417) (10 Apr 2019) - Security concerns regarding sharing files from a Riot user
+
+---
+
+All media files are left publicly exposed and were accessible via the unauthenticated and unrestricted [media download endpoint](https://web.archive.org/web/20190808012751/https://matrix.org/docs/spec/client_server/r0.5.0#get-matrix-media-r0-download-servername-mediaid) and were initially served from another Homeserver. This is a known issue which was reported publicly as early as December 2014 by New Vector's CEO.
+
+We are still in the process of analysing this data. In the hard leaked events, we came across two screenshots containing user names, avatars and messages from potential private rooms, included in events that the individual cannot see via regular access control.
+
+We were able to fetch a substantial part of that data. Some servers are no longer online and the data is no longer directly accessible from them. We were still able to fetch some of the data from other servers that might have downloaded the files in the past.
+
+This was possible because Matrix.org did not take into account expiration of old media when they designed the Matrix protocol and created synapse, the reference server implementation. This lingering of old personal data has been reported several times, including the privacy implications related to redaction. Leak of personal data across bridged network has also been reported and labelled as ["minor disaster"](https://web.archive.org/web/20190731114119/https://github.com/matrix-org/synapse/issues/1263#issuecomment-270975273), in New Vector's CEO own words.
+
+> We just had a minor disaster with this happening (the MXC URL was bridged to IRC, so redacting the content on Matrix was achieving nothing).  This should be trivial to fix...
+
+Because Matrix does not protect the download media endpoint, Matrix.org has allowed access to this enormous amount of personal data without any restriction across the whole federation. This unrestricted access has been known for years without action taken to this day, including related GDPR implications. That it is a concerns for individuals has also ["come up on regular basis"](https://web.archive.org/web/20190806013653/https://github.com/matrix-org/synapse/issues/2150#issuecomment-394522670) as per New Vector's CEO, even after GDPR went live:
+
+> So this comes up on a regular basis, especially from corporate security folks who don't like the idea that a URL leaked in HTTP logs (or proxy logs) etc could then be simply curl'd by any random user to access the content. It's not a matter of the chances of guessing the URL correctly (or the chances of being hit by lightning) but instead whether an attacker who does manage to get the URL automagically gets access to the content too.
+
+##### Avatars
+
+Avatars are a special kind of media file and show up in dedicated events of type `m.room.member`, which also contains Display names.
+
+We have found thousands and thousands pictures of people, some allowing to know where they are, some of children and overall a lot of historical data that was not directly accessible/visible on a day-to-day usage of Matrix. It would have required to fetch years of history manually.
+
+##### Display names
+
+By comparing events received by the individual Homeserver and those sent by Matrix.org, we see that 11 display names were leaked in the best case scenario (hard leak): those were never seen or recorded by the individual's Homeserver before. We found 2 full legal names and 2 first names.
+
+These directly hand out personal data without any legitimate reason: the individual was never allowed to see them, and they do not relate in any way to the individual. They do not add any value to the GDPR response either.
+
+### Other occurrences
+
+On Aug 7th 2019, New Vector's CEO [has confirmed](https://web.archive.org/web/20190807195939/https://github.com/privacytoolsIO/privacytools.io/pull/1047#issuecomment-518869441) that previous GDPR access requests have followed the same "full history" approach:
+
+> Every other GDPR request we've done (I don't have the full count to hand) has however provided the user's whole dataset - i.e. all the messages they've sent and received on their account.
+
+GDPR has come into effect at the end of May 2018, meaning these data leaks are happening on a regular basis for more than a year, and will keep occurring given New Vector's CEO communication.
+
+### Matrix.org communication
+
+Just like in our GDPR request, Matrix.org has only communicated when forced by events and disclosures happening around them, and each time as little as they could. They have failed to ensure their new tool did not leak any data. They have then failed to accurately assess the size of the leak. Their numbers still do not match reality, regardless of which approach is used to compare their numbers.
+
+These shortcomings directly prevent the individuals involved in this leak to assert their Right to be informed, and understand what is going on. They fail to be Fair and Transparent by not including a link to this research document which prompted their original publication, directly denying the possibility of individuals to be informed in greater detail.
+
+They also did not disclose this leak to other organisations that also have GDPR obligations, like the IRC Network Freenode, an [English organisation](https://beta.companieshouse.gov.uk/company/10308021) as well.
+
+### Conclusion
+
+The extract contained ~3.4M events not related to the individual making the request, equivalent to months and months of  messages. We will not be able to analyse it all given the sheer volume of data that this extract represents, but **we were able to find personal and private content (names, pictures), including of children, with relative ease in only a few hours, just barely scratching the surface. We were able to do so because of severe lack of bare-minimum protection of personal data, including the lack of basic access control in Matrix, which was known since 2014 by New Vector's CEO and employees.**
+
+New Vector Ltd does not seem to have any intention to inform anyone about the extend of this leak unless forced to by disclosures, or requests from other organisations that are as concerned as we are. To this day, Matrix.org still has not disclosed the real numbers and the real impact of this leak. They have not included a link back to this research document on their blog post, denying to the involved individuals their Right to be informed. They have not disclosed this with the networks they bridge to either. They have decided to not answer questions anymore, including any further ones despite our Right to be informed as individuals.
+
+But most concerning of all, New Vector Ltd does not consider this leak an issue in the first place just because some data is public, even after admitting they did disclose private messages. This type of leak is a recurring occurrence, and involves personal data each time, including our own. We hope this will allow everyone and anyone involved to understand the impact of the centralisation that Matrix.org has created and its consequences when they decide to leak data purposefully.
 
 ### A special note about E2EE
 
-A preliminary search shows that only `0.28 %` of the events are being encrypted, allowing us to pretty much access all the `content` key on them. That key contains the actual content of events: message, names, avatars MXC or any other data, and not just the metadata of the event.
+The extract's analysis shows that only < 1 % of the events are encrypted, allowing us to pretty much access all the `content` key on them. That key contains the actual content of events: messages, names, avatars URLs or any other data, and not just the metadata of the event.
 
 As Matrix.org will certainly take this opportunity to further promote E2EE as a way to solve the various privacy issues, and downplay any new Data leak, we want individuals to be aware of the following:
 
-**Riot is not spec compliant on E2EE, still using `/unstable/` endpoints as of v1.2.x, instead of those [described in the Matrix C2S r0.5.0 API specification](https://matrix.org/docs/spec/client_server/r0.5.0#id120). This is despite Matrix being out of beta and release as Matrix 1.0. This directly creates a lock-down effect which breaks the user experience on any other server implementation which attempts to be specification compliant. This either promotes the use of synapse, which is not privacy friendly, or pushes the user to not use E2EE at all.**
+Riot has not been spec compliant on E2EE, using `/unstable/` endpoints for all or nearly all calls until the v1.3.0 release, instead of those [described in the Matrix C2S r0.5.0 API specification](https://matrix.org/docs/spec/client_server/r0.5.0#id120). This is despite Matrix being out of beta and released as Matrix 1.0 well before the v1.3.0 release. This directly created a lock-down effect which broke the user experience on any other server implementation which attempted to be specification compliant. This either promotes the use of synapse, which is not privacy friendly, or pushes the user to not use E2EE at all.
 
-E2EE only covers the actual content of the messages. All the meta associated with it (sender, time, room, relation to other events, order) are not encrypted. While E2EE is very much we need and would protect critical data, **it does not solve all the privacy issues, and would not have made a difference in Matrix.org being in breach of GDPR**. 
+E2EE only covers the actual content of the messages. All the meta associated with it (sender, time, room, relation to other events, order) are not encrypted. **It does not solve most of the highlighted privacy issues, and would not have made a difference in Matrix.org being in breach of GDPR**. 
 
 **Lack of Specification compliance has been brought up to Matrix.org several times over the last years by the authors of this research document. Calls to re-align the reference implementations with the specification and commit to making the specifications comply have been made.**
 
 Matrix.org has been ignoring such calls until now with a direct impact on individuals' privacy, preferring to promote a fast-moving environment where:
 
 - Features are not aligned with the spec.
-- Other implementations are prevented to offer fundamental protection like E2EE, in a way which just works for everyone, and not just the reference implementations used together.
-- Glossy features like [Message editing & reactions](https://medium.com/@RiotChat/%EF%B8%8Fmessage-editing-%EF%B8%8F-reactions-5cffec8f71a2) or [full client rewrite](https://medium.com/@RiotChat/introducing-the-riotx-beta-for-android-b17952e8f771), are worked on rather than Privacy or specification compliance, directly impacting individual privacy under GDPR.
+- Other implementations were prevented to offer fundamental protection like E2EE, in a way which just works for everyone, and not just the reference implementations used together.
+- Glossy features like [Message editing & reactions](https://medium.com/@RiotChat/%EF%B8%8Fmessage-editing-%EF%B8%8F-reactions-5cffec8f71a2) or [full client rewrite](https://medium.com/@RiotChat/introducing-the-riotx-beta-for-android-b17952e8f771), were worked on rather than Privacy or specification compliance, directly impacting individual privacy under GDPR.
 
 
 
 ## Our overall analysis
 
-### Has Matrix.org improved its privacy practices since the first research document?
+### Has Matrix.org improved their privacy practices since the first research document?
 
 They have not.
 
-While there has been announcements that attempt to show a sudden interest in privacy, they only cover "front page" items and do not actually help the people be protected.
+While there have been announcements that attempt to show a sudden interest in privacy, they only cover "front page" items and do not actually help the people be protected.
 
 Fundamental problems that actually impact privacy and that can have real life consequences have not been looked at:
 
@@ -747,38 +998,41 @@ All the facts and our interpretation of GDPR point to no.
 
 Absolutely not.
 
-We have only seen Matrix.org take action if pressured by the community or backlash of an event that occurred. Even then, they are nowhere near basic GDPR compliance. Our first reaction was also to [badmouth](#Foreword) our first research document within the first 24 hours of publication, showing just how little interest they have for Privacy, and anyone defending it.
+We have only seen Matrix.org take action if pressured by the community, because of the backlash of an event that occurred. Even then, they are nowhere near basic GDPR compliance. Their first reaction was also to [badmouth](#Foreword) our first research document, instead of taking its contents into consideration, and do an internal check on the accuracy of the issues mentioned in it.
 
+Issues about privacy, access control and concerned individuals have been open as early as 2014 and are still open to this day. Critical data like profiles, display names, avatars, media files are accessible to anyone, without any restriction whatsoever, waiting on any kind of leak to be used and abused. Despite the numerous reports, including in our first research document, Matrix.org has done nothing about it since its creation.
 
+Finally, New Vector Ltd directly hands over personal data to other individuals, they are doing it without a documented lawful basis and without informing the individuals involved. They are doing it without considering how it gives direct access to personal data, including those of children like highlighted in our analysis of the leak.
 
 ## Closing words
 
-When we joined the Matrix ecosystem at the beginning of 2017, we immediately saw how privacy was not one of the core values of the project. Eager to help, eager to build a better protocol, we published [the very first code commit](https://github.com/kamax-matrix/mxisd/commit/4c5fe95e8ef17b6a51eae2903ca3b8e7f569b261) of what would become [mxisd](https://github.com/kamax-matrix/mxisd) today. From there, we set on to do our best to help users all over the ecosystem until today.
+When we joined the Matrix ecosystem at the beginning of 2017, we immediately saw how privacy was not one of the core values of the project. Eager to help, to build a better protocol, we published [the very first code commit](https://github.com/kamax-matrix/mxisd/commit/4c5fe95e8ef17b6a51eae2903ca3b8e7f569b261) of what would become [mxisd](https://github.com/kamax-matrix/mxisd) today. From there, we set on to do our best to help users all over the ecosystem until today.
 
-In November 2018, We created the Luxembourgish non-profit Libre Monde ([RCS](https://www.lbr.lu/mjrcs/) Number: F12030) with two goals: 1) Help people understand and use Free and Open source technologies, and 2) ensure people are empowered to review if those technologies are protecting their privacy rights. **As the Directors of Libre Monde, it is our mission to speak up, voice our concerns and produce research documents like this one**. 
+In November 2018, we created the Luxembourgish non-profit Libre Monde ([RCS](https://www.lbr.lu/mjrcs/) Number: F12030) with two goals: 1) Help people understand and use Free and Open source technologies, and 2) ensure people are empowered to review if those technologies are protecting their privacy rights. **As the Directors of Libre Monde, it is our mission to speak up, voice our concerns and produce research documents like this one**.
 
 Given our interaction with the leadership of New Vector Ltd and The Matrix.org Foundation, we do not believe Matrix.org is competent or capable of protecting the privacy of anyone, especially not the privacy of [the 3.5M accounts](https://fosdem.org/2019/interviews/matthew-hodgson/) they are responsible of. Matrix.org is currently implementing their own software in very important places like the French government and we are extremely worried what this means for the future.
 
-In these two and a half years, we have witnessed one constant, recurring pattern from where the fundamental issues come from: The conflict of interests of two Directors between New Vector Ltd who seeks financial gain, and The Matrix protocol, who is advertised as a secure, privacy-friendly open protocol. This has resulted into years of misleading communication, dishonest actions and shady promotion which directly hurt peoples' privacy and their rights.
-
-'As a closing note, we would like to bring the attention to the [latest change](https://beta.companieshouse.gov.uk/company/11648710/filing-history) in [Articles of Association](https://beta.companieshouse.gov.uk/company/11648710/filing-history/QTg2TEFWUE5hZGlxemtjeA/document?format=pdf&download=0) of The Matrix.org Foundation CIC on Companies House dated 21 Jun 2019:
+As a closing note, we would like to bring the attention to the [latest change](https://beta.companieshouse.gov.uk/company/11648710/filing-history) in [Articles of Association](https://beta.companieshouse.gov.uk/company/11648710/filing-history/QTg2TEFWUE5hZGlxemtjeA/document?format=pdf&download=0) of The Matrix.org Foundation CIC on Companies House dated 21 Jun 2019:
 
 > **THAT any actual or potential conflicts of interest of Matthew Hogdson and Amandine Le Page** (the "Conflicted Guardians") arising from or connected with their directorship and/or shareholding in New Vector Limited (whether direct or indirect interest of duty that conflicts or may conflict with the interests of the Foundation or their respective duties to the Foundation) **be and are hereby authorised** in accordance with section 180 of the Act, and accordingly, the Conflicted Guardians shall be entitled **to participate at any board meeting for voting and quorum purposes in respect of the matters detailed in their respective declaration of interest annexed to this resolution**.
 
 We hope that these declarations of interest, which are not available in the PDF, will be made public in the scope of GDPR Accountability.
 
-We are extremely disappointed and sad from what we have seen and learned since the publication of our first research document. We hope that this second document will be of help to people who seek some GDPR guidance which Matrix.org never provided to their users. If you are interested into joining the effort to build a Matrix alternative which is aimed at protecting your privacy, join us on [The Grid](https://gitlab.com/thegridprotocol/home#the-grid-protocol).
+After seeing the impacts of our first research document, we are determined to help those who seek some GDPR guidance which Matrix.org never provided to their users.
 
-We want to thank you everyone who has taken the time to read this lengthy research document and we hope you found it useful, for Matrix and for general GDPR clarifications.
+We want to thank everyone who has taken the time to read this lengthy research document and we hope you found it useful.
 
 ## Editorial Notes
 
 **CC Attribution:** [The Grid protocol](https://gitlab.com/thegridprotocol/home#the-grid-protocol) community  
-**Publisher:** Libre Monde  
+**Publisher:** Libre Monde ASBL  
 **Authors:** The [Kamax.io](https://www.kamax.io/) Team - [Maximus](https://github.com/maxidorius) and [mkatee](https://github.com/mkatee)  
 **Editors:** Linda Lapinlampi
 
-Authors can be contacted regarding this document on Matrix at `#kamax-matrix:kamax.org`  or alternatively `#kamax-matrix-community:libremonde.org`.
+Authors can be contacted regarding this document on Matrix at:
+
+-  `#kamax-matrix:kamax.org` 
+- `#kamax-matrix-community:libremonde.org`.
 
 ## Annexes
 
@@ -794,11 +1048,14 @@ To support this document, the following annexes are available, each going in mor
 - Annex D: [Screenshot showing the redacted internal file structure within `export-[REDACTED].zip`](annexes/annex_d-export_redacted.zip.png).
 - Annex E: [Preliminary analysis of the leaked events from the GDPR Data Request](annexes/annex_e-room_events.md).
   - Annex E.1: [Screenshot of a GitHub comment linking a recent PR to the leak](annexes/annex_e1-github_gdpr_comment.png).
+- Annex F: Data related to custom Access Control that is local to a Homeserver
+  - Annex F.1: [Screenshot of a room redirection (impersonated leave then impersonated join)](annexes/annex_f1-acl-redirection_room.png)
+  - Annex F.2: [Client API event of the communication from the Matrix.org Abuse account](annexes/annex_f2-acl-redirection_room_message.txt)
 
 ---
 
 **License:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). - See [Editorial Notes](#editorial-notes) for Attribution details.   
-**Document version:** v0.1  
+**Document version:** v0.2  
 **Published on:** [Gitlab](https://gitlab.com/libremonde-org/papers/research/privacy-matrix.org/tree/master/part2), [GitHub](https://github.com/organizations/libremonde-org/paper-research-privacy-matrix.org/blob/master/part2)
 
 ---
