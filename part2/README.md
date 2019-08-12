@@ -67,7 +67,7 @@ When we wrote the first research document, we didn't think we would ever feel th
 
 ## Purpose and Scope
 
-This document is a research paper for [The Grid Protocol](https://gitlab.com/thegridprotocol/home#the-grid) project, a fork of the Matrix protocol. Privacy is a founding value of the project. This is an effort to document privacy points from our parent project, which will be used to create guidelines and recommendations on building the protocol. It will be used for our own governing body/landing website and to evaluate Grid implementations in their handling of users' privacy. It will be used to help create the right tools, processes and documentation to help Users, Developers, and System administrators alike in a post-GDPR world.
+This document is a research paper by [Libre Monde ASBL](https://www.libremonde.org/), nonprofit dedicated to protecting people's privacy. We had the need to document privacy points for [The Grid Protocol](https://gitlab.com/thegridprotocol/home#the-grid) project, fork of the Matrix protocol. This paper will be used to create guidelines and recommendations on building the protocol. It will be used for our own governing body/landing website and to evaluate Grid implementations in their handling of users' privacy. It will be used to help create the right tools, processes and documentation to help Users, Developers, and System administrators alike in a post-GDPR world.
 
 ---
 
@@ -1025,7 +1025,7 @@ We want to thank everyone who has taken the time to read this lengthy research d
 ## Editorial Notes
 
 **CC Attribution:** [The Grid protocol](https://gitlab.com/thegridprotocol/home#the-grid-protocol) community  
-**Publisher:** Libre Monde ASBL  
+**Publisher:** [Libre Monde ASBL](https://www.libremonde.org/)  
 **Authors:** The [Kamax.io](https://www.kamax.io/) Team - [Maximus](https://github.com/maxidorius) and [mkatee](https://github.com/mkatee)  
 **Editors:** Linda Lapinlampi
 

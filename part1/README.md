@@ -2,7 +2,8 @@
 
 ---
 
-**This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).** See [Editorial Notes](#editorial-notes) for Attribution details.
+**This work is licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/).** See [Editorial Notes](#editorial-notes) for Attribution details.  
+This document was originally published as a [GitHub Gist](https://gist.github.com/maxidorius/5736fd09c9194b7a6dc03b6b8d7220d0).
 
 ---
 
@@ -43,7 +44,7 @@ If you have questions, want clarification, have spotted factual errors, or just 
 
 On the 12th of June 2019, after 5 years of hard work, Matrix.org released the v1.0 of the protocol, alongside v1.0.0 of the reference Homeserver implementation, synapse, and Riot v1.0.0 earlier in the year.
 
-Having studied Matrix for more than 2 years, creating various implementations with [mxisd]() as our most notable software, we decided to make a review of the protocol on three values that we believe are fundamental to any open protocol:
+Having studied Matrix for more than 2 years, creating various implementations with [mxisd](https://github.com/kamax-matrix/mxisd) as our most notable software, we decided to make a review of the protocol on three values that we believe are fundamental to any open protocol:
 
 - **Privacy:** Data/metadata should strictly only be accessible to user's intended recipient(s).
 - **Decentralisation:** Network operations can not depend on a "central" set of server(s).
@@ -53,7 +54,9 @@ After the Matrix.org security breach, when an unauthorised person gained access 
 
 ### Purpose and Scope
 
-**This document is a research paper for [The Grid Protocol](https://gitlab.com/thegridprotocol/home#the-grid) project, a fork of the Matrix protocol. Privacy is a core value of the project. This is an effort to document privacy points from our parent project, which can then be used to create guidelines/recommendations on what to do. It will be used for our own governing body/landing website and to evaluate Grid implementations for their priority for privacy.**
+This document is a research paper by [Libre Monde ASBL](https://www.libremonde.org/), nonprofit dedicated to protecting people's privacy. We had the need to document privacy points for [The Grid Protocol](https://gitlab.com/thegridprotocol/home#the-grid) project, fork of the Matrix protocol. This paper will be used to create guidelines and recommendations on building the protocol. It will be used for our own governing body/landing website and to evaluate Grid implementations in their handling of users' privacy. It will be used to help create the right tools, processes and documentation to help Users, Developers, and System administrators alike in a post-GDPR world.
+
+---
 
 In this document, we will attempt to answer the following questions:
 
@@ -642,6 +645,7 @@ To discuss further, come to our Matrix room: `#kamax-matrix:kamax.io`.
 ## Editorial notes
 
 **CC Attribution:** [The Grid protocol](https://gitlab.com/thegridprotocol/home/blob/master/README.md#the-grid) community  
+**Publisher:** [Libre Monde ASBL](https://www.libremonde.org/)  
 **Authors:** The [Kamax.io](https://www.kamax.io/) Team - [Maximus](https://github.com/maxidorius) and [mkatee](https://github.com/mkatee)  
 **Reviewers:** [Slavi](https://github.com/spantaleev), [mujx](https://github.com/mujx), Juuso "Linda" Lapinlampi
 
