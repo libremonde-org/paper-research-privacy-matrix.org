@@ -796,10 +796,10 @@ So while a room may be set to "public", it is actually not really public for all
 
 Related issues:
 
-- [matrix-org/matrix-doc#913](https://github.com/matrix-org/matrix-doc/issues/913)
-- [matrix-org/synapse#1515](https://github.com/matrix-org/synapse/issues/1515)
-- [matrix-org/synapse#1559](https://github.com/matrix-org/synapse/issues/1559)
-- [matrix-org/synapse#4236](https://github.com/matrix-org/synapse/issues/4236)
+- [matrix-org/matrix-doc#913](https://web.archive.org/web/20190803220351/https://github.com/matrix-org/matrix-doc/issues/913)
+- [matrix-org/synapse#1515](https://web.archive.org/web/20190803220342/https://github.com/matrix-org/synapse/issues/1515)
+- [matrix-org/synapse#1559](https://web.archive.org/web/20190803220333/https://github.com/matrix-org/synapse/issues/1559)
+- [matrix-org/synapse#4236](https://web.archive.org/web/20190803220320/https://github.com/matrix-org/synapse/issues/4236)
 
 ###### Per service
 
