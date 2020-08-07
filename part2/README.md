@@ -155,7 +155,7 @@ This also applies to HTTP, the protocol underneath Matrix, which adds its own me
 
 Personal data has nothing to do with it being available publicly or not. It is all about how likely it is to identify you, as a person, or to single you out enough so that you are, for all intents and purposes, uniquely identified.
 
-A few important canvases to this:
+A few important caveats to this:
 
 - What is personal data for one Organisation is not always for another.
 - What makes a piece of data personal is not absolute. While unlikely, it is always possible for an Organisation to argue it is not.
@@ -192,7 +192,7 @@ Those typically are:
 - an [OpenID token](https://matrix.org/docs/spec/client_server/r0.5.0#id199), typically used in your Integration Manager (widgets, sticker packs, etc.).
 - in case of a [Bridge](https://matrix.org/bridges), your User ID on the remote network if applicable.
 
-#### Extra points with our stores' loyalty card
+#### Extra points with our store's loyalty card
 
 If some metadata links to you via a device, either because you are the only owner/user of the device, or because the data is only usable after you unlocked your device/logged in your computer, then it is personal data.
 
@@ -392,7 +392,7 @@ How to make a GDPR Request for Matrix data is one of the undocumented yet crucia
 
 To ensure that the ecosystem we will build as part of The Grid project, and so that anyone currently using Matrix has practical information in that respect, we decided to fully document the process of a GDPR request with Matrix.org when self-hosting, or at least when the individual does not have their Homeserver account on any Homeserver managed by New Vector Ltd, the current Data Controller of Matrix.org.
 
-A full timeline and transcript is available in [Annex A](#Annexes) for the exchanges that took place between one of the author and New Vector Ltd, over the course of 37 days: from June 13th 2019 to July 20th 2019.
+A full timeline and transcript is available in [Annex A](#Annexes) for the exchanges that took place between one of the authors and New Vector Ltd, over the course of 37 days: from June 13th 2019 to July 20th 2019.
 
 **Over the course of this research into GDPR Requests, we came across a Personal Data Breach, detailed in [the next section](#Personal-Data-Breach-Disclosure) of this document.**
 
@@ -451,14 +451,14 @@ About an hour after and while our GDPR Data access request was being handled, Ma
 >
 > **However, it is not acceptable to amend or delete the data if you would not otherwise have done so. Under the Data Protection Act 2018  (DPA 2018), it is an offence to make any amendment with the intention of preventing its disclosure.**
 
-At this time, it is our believe that the legal entities behind Matrix.org:
+At this time, it is our belief that the legal entities behind Matrix.org:
 
 - have committed an offence under DPA 2018
 - have failed to provide a lawful basis for their Identity data processing
 - have failed to be Fair and Transparent
 - have failed to respond to the GDPR request without undue delay.
 
-When we came aware of the blog post, we immediately informed the GDPR Operator that we expected to still receive the data now deleted from the live server, and the access log to our personal identifiers on the Identity API. The GDPR Operator ignored our statement, and provided us with a URL, a login and a password to a ZIP file.
+When we became aware of the blog post, we immediately informed the GDPR Operator that we expected to still receive the data now deleted from the live server, and the access log to our personal identifiers on the Identity API. The GDPR Operator ignored our statement, and provided us with a URL, a login and a password to a ZIP file.
 
 The GDPR Operator then informed us that the ZIP file contained all our rooms events, but did NOT contain our group memberships, which they provided in plain text in the chat, failing to provide the data in a machine readable format, and simply failing to add it to the ZIP that was just transmitted.
 
@@ -615,7 +615,7 @@ We have chosen to disclose this breach under [Full Disclosure](https://en.wikipe
 
 In [Annex E](#annexes), you will find all related commands/queries used to compute the various numbers/data sets used in this section on a purely factual basis, without real analysis. The main document will focus on explaining the context in which the leak happened, the various numbers we computed, how we came to the conclusion that this is a leak and analyse the leak itself.
 
-While New Vector CEO's has recognised only events directly related to the individual are required by law, we have considered three different impact scenarios:
+While New Vector's CEO has recognised only events directly related to the individual are required by law, we have considered three different impact scenarios:
 
 - **Soft Leak:** Events not directly related to the individual have been included.
 - **Medium Leak:** Events not sent to the individual's Service Provider have been included.
@@ -679,7 +679,7 @@ The PR was created on the 2nd of July 2019 with the first commit on the 1st of J
 
 This confirmed the following facts:
 
-- New Vector Ltd own evaluation of their tools to comply with GDPR requests was that they were "*hacky*", that is not fit for purpose in the spirit of GDPR.
+- New Vector Ltd's own evaluation of their tools to comply with GDPR requests was that they were "*hacky*", that is, not fit for purpose in the spirit of GDPR.
 - New Vector Ltd had to somehow change their internal GDPR procedures, most likely resulting from GDPR requests made by individuals after reading our first research document.
 - This data leak is either based on their "*hacky script*", or on this new tool. Matrix.org [claims this new tool was used, and that it is the first time it is used](https://web.archive.org/web/20190726032203/https://matrix.org/blog/2019/07/24/data-portability-tooling-bug/) which we have no way of validating. There is the possibility that data leak is a recurring occurrence either way.
 
@@ -691,7 +691,7 @@ On the 24th of July, Matrix.org [published a blog post](https://web.archive.org/
 - 19 events from 4 users across 2 rooms were mistakenly included, which did not match our preliminary analysis.
 - The impact of this leak is "*extremely limited*", without giving details on its meaning or criteria used to assess it, which also did not match our preliminary analysis.
 
-Given the huge mismatch between the numbers we had and what Matrix.org claimed without linking to this research, we decided to inspect the extract in more details to find out what was going on. We contacted several individuals we knew personally, informing them of the real numbers we were seeing.
+Given the huge mismatch between the numbers we had and what Matrix.org claimed without linking to this research, we decided to inspect the extract in more detail to find out what was going on. We contacted several individuals we knew personally, informing them of the real numbers we were seeing.
 
 As soon as we had some kind of numbers in terms of medium/hard leak, we decided to contact organisations that were involved so they could act if needed. The first organisation was the IRC Network Freenode. We informed them about the leak on Aug 4th 2019 with our current numbers (~20k hard leaked events in 26 rooms) and had a talk on the next day. We learned that Matrix.org did not inform them about the leak in the first place. They shared our concerns about the whole situation, and reached out to Matrix.org to also get their side of the story.
 
@@ -790,9 +790,9 @@ They base their argument on the fact that "*these events were already publicly a
 
 Communication from New Vector Ltd on Matrix.org claims that the shared data is public, which is not actually the case in practice, giving a misleading sense of impact-free leak. There are several restrictions in place in the protocol and the reference server implementation synapse, used by virtually every server, which actually prevent "public" room to be public.
 
-At the federation level, there is no "peeking" for public room. Peeking is the technical term used for the ability to see room history and its events without being joined. Peeking over federation is simply not possible at the protocol level as there are no endpoint for it. It means that unless the server of the user is already part of the room, there is no way to do so. At the synapse level, there is simply not workaround code to make it happen, including for guest accounts, which is used for public viewers like Matrix Static.
+At the federation level, there is no "peeking" into public rooms. Peeking is the technical term used for the ability to see room history and its events without being joined. Peeking over federation is simply not possible at the protocol level as there are no endpoints for it. It means that unless the server of the user is already part of the room, there is no way to do so. At the synapse level, there is simply no workaround code to make it happen, including for guest accounts, which is used for public viewers like Matrix Static.
 
-So while a room may be set to "public", it is actually not really public for all intents and purpose: There has at least one user joined in the room for other users on the same server to peek. This has been known since 2016 at least and is a well-established fact.
+So while a room may be set to "public", it is actually not really public for all intents and purposes: there has at least one user joined in the room for other users on the same server to peek. This has been known since 2016 at least and is a well-established fact.
 
 Related issues:
 
@@ -928,7 +928,7 @@ On Aug 7th 2019, New Vector's CEO [has confirmed](https://web.archive.org/web/20
 
 > Every other GDPR request we've done (I don't have the full count to hand) has however provided the user's whole dataset - i.e. all the messages they've sent and received on their account.
 
-GDPR has come into effect at the end of May 2018, meaning these data leaks are happening on a regular basis for more than a year, and will keep occurring given New Vector's CEO communication.
+GDPR has come into effect at the end of May 2018, meaning these data leaks have been happening on a regular basis for more than a year, and will keep occurring given New Vector's CEO communication.
 
 ### Matrix.org communication
 
