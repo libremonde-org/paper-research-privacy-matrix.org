@@ -638,10 +638,6 @@ We do not claim we have made a full investigation or review, but we hope these n
 
 That you'll be able to make an educated and informed decision when choosing which Client, Homeserver, Identity server and Integration server you wish to run in the future. That you'll know which questions to ask when looking for the next best thing.
 
-To discuss further, come to our Matrix room: `#kamax-matrix:kamax.io`.
-
-
-
 ## Editorial notes
 
 **CC Attribution:** [The Grid protocol](https://gitlab.com/thegridprotocol/home/blob/master/README.md#the-grid) community  

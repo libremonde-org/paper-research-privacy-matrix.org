@@ -1029,11 +1029,6 @@ We want to thank everyone who has taken the time to read this lengthy research d
 **Authors:** The [Kamax.io](https://www.kamax.io/) Team - [Maximus](https://github.com/maxidorius) and [mkatee](https://github.com/mkatee)  
 **Editors:** Linda Lapinlampi
 
-Authors can be contacted regarding this document on Matrix at:
-
--  `#kamax-matrix:kamax.org` 
-- `#kamax-matrix-community:libremonde.org`.
-
 ## Annexes
 
 To support this document, the following annexes are available, each going in more details about a specific element or event being covered in this research.
