@@ -11,8 +11,6 @@ This document was originally published as a [GitHub Gist](https://gist.github.co
 >
 > Nonetheless it is possible that a mistake has made its way in these notes. If that is the case, please get in touch with the author which will fix any factual mistakes in good faith. **We always encourage people not to trust statements at face value and always double-check for themselves.**
 
----
-
 ## TL;DR
 
 `matrix.org` and `vector.im` receive a lot of private, personal and identifiable data on a regular basis, or metadata that can be used to precisely identify and/or track users/server, their social graph, usage pattern and potential location. This is possible both by the default configuration values in synapse/Riot that do not promote privacy, and by specific choices made by their developers to not disclose, inform users or resolve in a timely manner several known behaviours of the software.

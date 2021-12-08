@@ -2,9 +2,8 @@
 
 ---
 
-**License:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). - See [Editorial Notes](#editorial-notes) for Attribution details.   
-**Document version:** v0.2  
-**Published on:** [Gitlab](https://gitlab.com/libremonde-org/papers/research/privacy-matrix.org/tree/master/part2), [GitHub](https://github.com/organizations/libremonde-org/paper-research-privacy-matrix.org/blob/master/part2)
+**License:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). - See [Editorial Notes](#editorial-notes) for Attribution details.    
+**Published on:** [Gitlab](https://gitlab.com/libremonde-org/papers/research/privacy-matrix.org/tree/master/part2), [GitHub](https://github.com/libremonde-org/paper-research-privacy-matrix.org/blob/master/part2)
 
 ---
 
@@ -23,10 +22,8 @@ This document contains facts, interpretations, opinions and personal experience 
 
 If you believe the wording of a sentence is problematic and misleading given the context and intended point, feel free to give us feedback in the outlined method of contact at the bottom of this document. We will take into account all reports of such misleading wordings in good faith.
 
----
-
 ## TL;DR
-After further research and analysis based on our [first document](https://gist.github.com/maxidorius/5736fd09c9194b7a6dc03b6b8d7220d0), and despite the changes that took place since then, we believe that [New Vector LTD](https://beta.companieshouse.gov.uk/company/10873661) and [The Matrix.org Foundation CIC](https://beta.companieshouse.gov.uk/company/11648710) representing `matrix.org` and `vector.im`:
+After further research and analysis based on our [first document](../part1/README.md), and despite the changes that took place since then, we believe that [New Vector LTD](https://beta.companieshouse.gov.uk/company/10873661) and [The Matrix.org Foundation CIC](https://beta.companieshouse.gov.uk/company/11648710) representing `matrix.org` and `vector.im`:
 
 - Do not comply with [EU GDPR](https://eur-lex.europa.eu/legal-content/EN/TXT/?qid=1532348683434&uri=CELEX:02016R0679-20160504) ([Portal](https://ec.europa.eu/info/law/law-topic/data-protection/data-protection-eu_en)).
 - Do not follow guidelines, best practices and explicit requirements outlined in [ICO](https://ico.org.uk/) [Guide to GDPR](https://ico.org.uk/for-organisations/guide-to-data-protection/guide-to-the-general-data-protection-regulation-gdpr/) for those who have day-to-day responsibilities.
@@ -41,12 +38,6 @@ After further research and analysis based on our [first document](https://gist.g
 **If you currently have a Matrix account on any server, not just `matrix.org`, we strongly encourage you to consider if you need to [make a complaint](https://ico.org.uk/make-a-complaint/) with the English GDPR Authority, [ICO](https://ico.org.uk) regarding Matrix.org processing of your data until now.**
 
 ## Foreword
-
----
-
-**This is a living document. Due to the need for the timely disclosure of a EU GDPR Personal Data Breach by Matrix.org, some sections and/or annexes might not be fully complete. We will release this document as v1.0 when we have fleshed out all the remaining sections.**
-
----
 
 On June 13th 2019, we published [Notes on privacy and data collection of Matrix.org](https://gist.github.com/maxidorius/5736fd09c9194b7a6dc03b6b8d7220d0) detailing how, from a software perspective, Matrix.org managed to create an ecosystem where they received a tremendous amount of personal data for years in a way people would not expect or even suspect. Even after we had been keeping a close eye on that matter for the past two years, we only realised how far and wide it spanned while we wrote the document. It is only after having all the various elements come together in a single document that we understood the scale of what was happening.
 
@@ -508,7 +499,8 @@ Our request specifically mentioned all of them:
 
 #### Answers
 
-**NOTE:** This section is currently incomplete, we will complete it for v1.0 after we have dealt with the data leak.
+**NOTE:** This section is incomplete and originally supposed to be completed with a detailed analysis.  
+The COVID pandemic put a halt to those plans sadly. We won't finish these sections or add more content.
 
 ---
 
@@ -531,7 +523,8 @@ All of these must be available under our [Right to be informed](https://ico.org.
 
 #### Data
 
-**NOTE:** This section is currently incomplete, we will complete it for v1.0 after we have dealt with the data leak.
+**NOTE:** This section is incomplete and originally supposed to be completed with a detailed analysis.  
+The COVID pandemic put a halt to those plans sadly. We won't finish these sections or add more content.
 
 ---
 
@@ -560,7 +553,8 @@ We expect to see answers to those in the answers provided for each domain.
 
 ### Received content
 
-**NOTE:** This section is currently incomplete, we will complete it for v1.0 after we have dealt with the data leak.
+**NOTE:** This section is incomplete and originally supposed to be completed with a detailed analysis.  
+The COVID pandemic put a halt to those plans sadly. We won't finish these sections or add more content.
 
 ---
 
@@ -586,20 +580,6 @@ We are currently considering talking about the following in the final version of
 - Accuracy
   - Was the data only covering the Individual's data, or was there more?
   - If any, were special cases of finding/mapping sets of data handled correctly, resulting in all the relevant data being included? (e.g. no table were forgotten from synapse's DB).
-
-#### Answers
-
-> **TODO**
-
-#### Data
-
-> **TODO**
-
-### Analysis
-
-> **TODO**
-
-
 
 ## Personal Data Breach Disclosure
 
@@ -964,8 +944,6 @@ Matrix.org has been ignoring such calls until now with a direct impact on indivi
 - Other implementations were prevented to offer fundamental protection like E2EE, in a way which just works for everyone, and not just the reference implementations used together.
 - Glossy features like [Message editing & reactions](https://medium.com/@RiotChat/%EF%B8%8Fmessage-editing-%EF%B8%8F-reactions-5cffec8f71a2) or [full client rewrite](https://medium.com/@RiotChat/introducing-the-riotx-beta-for-android-b17952e8f771), were worked on rather than Privacy or specification compliance, directly impacting individual privacy under GDPR.
 
-
-
 ## Our overall analysis
 
 ### Has Matrix.org improved their privacy practices since the first research document?
@@ -996,7 +974,7 @@ All the facts and our interpretation of GDPR point to no.
 
 ### Is Matrix.org going the extra mile to protect your privacy?
 
-Absolutely not.
+No, given what we have witnessed and our first-hand experience.
 
 We have only seen Matrix.org take action if pressured by the community, because of the backlash of an event that occurred. Even then, they are nowhere near basic GDPR compliance. Their first reaction was also to [badmouth](#Foreword) our first research document, instead of taking its contents into consideration, and do an internal check on the accuracy of the issues mentioned in it.
 
@@ -1009,8 +987,6 @@ Finally, New Vector Ltd directly hands over personal data to other individuals, 
 When we joined the Matrix ecosystem at the beginning of 2017, we immediately saw how privacy was not one of the core values of the project. Eager to help, to build a better protocol, we published [the very first code commit](https://github.com/kamax-matrix/mxisd/commit/4c5fe95e8ef17b6a51eae2903ca3b8e7f569b261) of what would become [mxisd](https://github.com/kamax-matrix/mxisd) today. From there, we set on to do our best to help users all over the ecosystem until today.
 
 In November 2018, we created the Luxembourgish non-profit Libre Monde ([RCS](https://www.lbr.lu/mjrcs/) Number: F12030) with two goals: 1) Help people understand and use Free and Open source technologies, and 2) ensure people are empowered to review if those technologies are protecting their privacy rights. **As the Directors of Libre Monde, it is our mission to speak up, voice our concerns and produce research documents like this one**.
-
-Given our interaction with the leadership of New Vector Ltd and The Matrix.org Foundation, we do not believe Matrix.org is competent or capable of protecting the privacy of anyone, especially not the privacy of [the 3.5M accounts](https://fosdem.org/2019/interviews/matthew-hodgson/) they are responsible of. Matrix.org is currently implementing their own software in very important places like the French government and we are extremely worried what this means for the future.
 
 As a closing note, we would like to bring the attention to the [latest change](https://beta.companieshouse.gov.uk/company/11648710/filing-history) in [Articles of Association](https://beta.companieshouse.gov.uk/company/11648710/filing-history/QTg2TEFWUE5hZGlxemtjeA/document?format=pdf&download=0) of The Matrix.org Foundation CIC on Companies House dated 21 Jun 2019:
 
@@ -1050,7 +1026,6 @@ To support this document, the following annexes are available, each going in mor
 ---
 
 **License:** [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/). - See [Editorial Notes](#editorial-notes) for Attribution details.   
-**Document version:** v0.2  
 **Published on:** [Gitlab](https://gitlab.com/libremonde-org/papers/research/privacy-matrix.org/tree/master/part2), [GitHub](https://github.com/organizations/libremonde-org/paper-research-privacy-matrix.org/blob/master/part2)
 
 ---
