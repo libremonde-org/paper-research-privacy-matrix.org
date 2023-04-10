@@ -7,6 +7,9 @@
 
 ---
 
+> Like any research paper, this document is most accurate at the time of writting (see commit history).  
+> Review and critical analysis of the current Matrix ecosystem is left to the reader to evaluate how accurate this document remains over the years.
+
 ## DISCLAIMER
 
 This research and investigation document contains legal references, but **this document is NOT

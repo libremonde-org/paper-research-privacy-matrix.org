@@ -10,6 +10,9 @@ This document was originally published as a [GitHub Gist](https://gist.github.co
 > **DISCLAIMER:** This research and investigation work is based on several years of experience within the Matrix ecosystem and validation of facts via public and private communication. Reverse engineering was used to ensure some of the statements presented as facts regarding implementations are accurate.
 >
 > Nonetheless it is possible that a mistake has made its way in these notes. If that is the case, please get in touch with the author which will fix any factual mistakes in good faith. **We always encourage people not to trust statements at face value and always double-check for themselves.**
+>
+> This document is most accurate for the software versions listed in the [Setup](#setup) section and may not be entirely accurate on their latest versions.  
+> Review and critical analysis of the current Matrix ecosystem is left to the reader to evaluate how accurate this document remains over the years.
 
 ## TL;DR
 
